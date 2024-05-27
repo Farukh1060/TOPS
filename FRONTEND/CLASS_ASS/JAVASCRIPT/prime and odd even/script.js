@@ -1,7 +1,7 @@
 
 let btn = document.getElementById("submit")
 btn.addEventListener ("click",val)
-function val(){
+  function  val(){
     let number1 = parseFloat(document.getElementById('num1').value);
     let result;
     if(number1 % 2 == 0){
