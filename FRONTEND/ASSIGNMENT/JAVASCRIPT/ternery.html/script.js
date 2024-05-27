@@ -33,11 +33,17 @@ function chk(){
     //  console.log(val)
     }
     j++;
-    // console.log(val)
+    console.log(val)
     return val[i]
   }
-console.log(val)
+ let check_btn =  document.getElementById("btn")
 
-
-
+check_btn.addEventListener("click",check_min)
+function check_min(){
+  a = val[0];
+  b = val[1];
+  c = val[2];
+  let ans = (a<b)?((a<c)?a:c):((b<c)? b:c)
+  console.log(ans)
+}
 
