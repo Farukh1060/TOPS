@@ -55,3 +55,12 @@
   display: flex;
   justify-content: space-around;
 }
+.container .pdf {
+  text-align: center;
+}
+.container .pdf button {
+  padding: 5px 30px;
+  font-size: 18px;
+  margin-inline: auto;
+  margin-block: 20px;
+}

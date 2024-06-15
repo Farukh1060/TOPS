@@ -46,3 +46,16 @@ let x=[];
        }
 
     }
+
+    //print pdf
+
+    let down = document.getElementById("down")
+    down.addEventListener("click",function(){
+        document.querySelector(".res_btn").style = "display:none"
+        document.querySelector(".pdf").style = "display:none"
+        let pdf = document.querySelector(".container")
+        html2pdf(pdf,{
+            margin:10,
+            filename: "myfile.pdf"
+        })
+    })
