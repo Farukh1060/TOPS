@@ -23,17 +23,27 @@ body{
 .grid{
     /* width: 100%; */
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 100px;
+    gap: 20px;
+    align-items: center;
     justify-content: space-between;
 
 }
 input ,textarea{
+    
     font-size: 20px;
     padding: 5px;
+    margin-block: 5px;
+}
+textarea{
+    min-width: 100%;
+    resize: none;
+    
 }
 input[type="radio"]{
+    border: 1px solid red;
   display: inline-block;
-  width: 50px;
+  /* width: 50px; */
  /* width: 100px; */
 }
 input[type="submit"]{
@@ -49,3 +59,31 @@ input:focus,textarea:focus{
     outline: none;
     border: 2px solid gray;
 }
+.msg{
+    
+    color: red;
+    font-size: 16px;
+}
+.error{
+    
+    border-radius: 5px;
+    border: 1px solid red;
+}
+.boder{
+    width: 195px;
+    height: 2px;
+    border-bottom: 1px solid red;
+    animation-name:changeWidth ;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes changeWidth {
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 195px;
+    }
+}
+
+
