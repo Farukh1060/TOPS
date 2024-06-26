@@ -9,20 +9,24 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: wheat;
   text-transform: capitalize;
-  background-color: black;
   font-size: 22px;
   z-index: -3;
 }
 body .img_container {
   display: grid;
-  place-items: center;
+  align-content: flex-start;
   position: relative;
-  background-image: url(photo/hotal3.jpg);
+  background-image: url(photo/food4.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
   z-index: -2;
+}
+body .img_container img {
+  width: 80px;
+  border-radius: 50%;
+  margin: 30px;
 }
 body .img_container::after {
   content: " ";
@@ -35,9 +39,11 @@ body .img_container::after {
   background-color: rgba(0, 0, 0, 0.6);
 }
 body .img_container .form_container {
+  margin-inline: auto;
   padding: 20px;
   border: 1px solid white;
   z-index: 1;
+  backdrop-filter: blur(5px);
 }
 body .img_container .form_container .restaurants_food {
   max-width: 500px;
@@ -48,7 +54,7 @@ body .img_container .form_container .restaurants_food .grid {
   gap: 10px;
   padding: 8px;
 }
-body .img_container .form_container .restaurants_food .grid input {
+body .img_container .form_container .restaurants_food .grid input, body .img_container .form_container .restaurants_food .grid select {
   background: transparent;
   background-color: rgba(0, 0, 0, 0.5);
   border: 1px solid wheat;
@@ -57,24 +63,44 @@ body .img_container .form_container .restaurants_food .grid input {
   padding: 5px 10px;
   border-radius: 5px;
 }
-body .img_container .form_container .restaurants_food .grid input::-webkit-inner-spin-button {
+body .img_container .form_container .restaurants_food .grid input::-webkit-inner-spin-button, body .img_container .form_container .restaurants_food .grid select::-webkit-inner-spin-button {
   appearance: none;
 }
 body .img_container .form_container .restaurants_food .booking_container {
   position: relative;
 }
-body .img_container .form_container .restaurants_food .booking_container .get_option {
+body .img_container .form_container .restaurants_food .booking_container .icon {
   position: relative;
-}
-body .img_container .form_container .restaurants_food .booking_container .fa-solid {
-  position: absolute;
   display: grid;
   place-items: center;
-  right: 0;
-  padding: 5px 0px;
+}
+body .img_container .form_container .restaurants_food .booking_container .icon .fa-solid {
+  position: absolute;
+  right: 10px;
 }
 body .img_container .form_container .restaurants_food .booking_container .booking_option {
-  position: absolute;
-  right: 0px;
   display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(5px);
+  border: 1px solid wheat;
+  border-radius: 5px;
+  right: 8px;
+  top: 53px;
+}
+body .img_container .form_container .restaurants_food .booking_container .booking_option::after {
+  content: "";
+  position: absolute;
+  top: -21px;
+  left: 80px;
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent transparent wheat transparent;
+}
+body .img_container .form_container .restaurants_food .booking_container .booking_option option {
+  padding: 5px 10px;
+}
+body .img_container .form_container .restaurants_food .booking_container .booking_option option:hover {
+  color: whitesmoke;
+  background-color: rgba(204, 204, 204, 0.4392156863);
 }

@@ -6,11 +6,12 @@
     <title>restaurants</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    <!-- <link rel="stylesheet" href="fontawesome-free-6.5.2-web/css/all.min.css"> -->
 </head>
 <body>
     <section class="img_container">
         <!-- <img src="style/photo/hotal3.jpg" alt=""> -->
+        <div><img src="style/photo/images.jpeg" alt=""></div>
         <section class="form_container">
             <form action="" id="restaurants" class="restaurants_food">
                 <div class="user_name_container grid">
@@ -36,18 +37,29 @@
                 </div>
 
                 <div class="booking_container grid">
-                    <label for="booking"> booking choice : </label>
-                    <input type="text" id="option_value" class="get_option">
-                    <i class="fa-solid fa-chevron-down"></i>
 
-                    <div class="booking_option">
-                        <option value="full">full day booking</option>
-                        <option value="half">half day booking</option>
-                        <option value="hourly">hourly booking</option>
+                    <label for="booking"> booking choice : </label>
+
+                    <div class="icon">
+                        <input type="text" id="option_value" class="get_option" readonly>
+                        <i class="fa-solid fa-chevron-down" id="arrow"></i>
                     </div>
-                     <!-- <select name="" id="">
-                        
-                     </select> -->
+
+                    <div class="booking_option" id="option_container">
+                        <div>
+                            <option value="full" role="button">full day booking</option>
+                            
+                        </div>
+                        <div>
+                            <option value="half">half day booking</option>
+                           
+                        </div>
+                        <div>
+                            <option value="hourly">hourly booking</option>
+                            
+                        </div>
+                    </div>
+                    
                 </div>
     
             </form>
