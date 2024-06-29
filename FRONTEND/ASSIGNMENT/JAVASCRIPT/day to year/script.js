@@ -1,7 +1,8 @@
 
 let btn = document.getElementById("result")
 btn.addEventListener ("click",val)
-  function  val(){
+  function  val(e){
+    e.preventDefault()
     let number1 = parseFloat(document.getElementById('num1').value);
     let number2 = parseFloat(document.getElementById('num2').value);
 // for triangle
@@ -13,10 +14,8 @@ document.getElementById("result_value_tri").innerHTML = result1;
     document.getElementById("result_value_rect").innerHTML = result2;
 
 
-
-   
-
-}
+    return false;
+  }
 // day left in cristmas
 
 let x = new Date();

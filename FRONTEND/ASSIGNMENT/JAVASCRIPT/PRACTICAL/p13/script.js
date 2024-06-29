@@ -13,6 +13,7 @@ function refer(){
         AP.innerHTML ="AM"
 
     }
-    }
+    return false
+}
 
 setInterval(refer,1)

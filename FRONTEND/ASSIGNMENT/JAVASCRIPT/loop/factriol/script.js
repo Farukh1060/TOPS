@@ -7,10 +7,12 @@
 document.getElementById("btn").addEventListener("click",fact)
 
 function fact(){
+
 let factriol = 1;
 let num = document.getElementById("num1").value
 for(let j = num;j>=1;j--){
  factriol = factriol *j;
+ document.getElementById("result_value").innerHTML += (factriol);
 }
-document.getElementById("result_value").innerHTML = (factriol);
+return false;
 }

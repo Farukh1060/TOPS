@@ -1,8 +1,9 @@
 function myfun(num){
+    
     for(let i=1;i<=10;i++){
         document.getElementById("para").innerHTML += `${num} x ${i} = ${num * i}`+"<br>";
     }
-
+    return false
 }
 
 myfun(5);

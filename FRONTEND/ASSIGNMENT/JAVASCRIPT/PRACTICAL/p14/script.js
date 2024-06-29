@@ -6,11 +6,13 @@ cl_me.addEventListener("click",function(){
     op_me.setAttribute("style","display: block;")
     cl_me.setAttribute("style","display: none;")
     menu.setAttribute("style","display: block;")
+    return false
 })
 op_me.addEventListener("click",function(){
     cl_me.setAttribute("style","display: block;")
     op_me.setAttribute("style","display: none;")
     menu.setAttribute("style","display: none;")
+    return false
 })
 // console.log(window.scrollY = 10)
 let i=0;
@@ -30,6 +32,7 @@ window.addEventListener("scroll",function(e){
         console.log(window.scrollY)
         c()   
     }
+    return false
 })
 
 for(let j=0;j<4;j++){
@@ -44,7 +47,8 @@ function c(j){
             i++
             setTimeout(function(){c(j)},1)
         }  
-    }
+   return false     
+}
          
 
 

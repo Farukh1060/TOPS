@@ -23,6 +23,7 @@ pw.addEventListener("click",function(){
         pw.classList.add("fa-eye-slash")
 
     }
+    return false
     });
 cnfpw.addEventListener("click",function(){
     if(cnfpassword.type == "password" && cnfpw.classList.contains("fa-eye-slash")){
@@ -35,6 +36,7 @@ cnfpw.addEventListener("click",function(){
         cnfpw.classList.add("fa-eye-slash")
 
     }
+    return false
 });
 
 
@@ -91,7 +93,7 @@ function first_name(){
         msg[0].classList.remove("msg")
         emt_inp[0].classList.remove("error")
     }
-
+    return false
 }
 
 function last_name(){
@@ -117,7 +119,7 @@ function last_name(){
         msg[1].classList.remove("msg")
         emt_inp[1].classList.remove("error")
     }
-
+    return false
 }
 function gender(){
 
@@ -133,7 +135,7 @@ function gender(){
         msg[2].classList.remove("msg")
         err.classList.remove("boder")
     }
-
+ return false
 }
 
 function addr(){
@@ -160,7 +162,7 @@ function addr(){
         msg[3].classList.remove("msg")
         add_ress.classList.remove("error")
     }
-
+ return false
 }
 
 function ci_ty(){
@@ -181,7 +183,7 @@ function ci_ty(){
         msg[4].classList.remove("msg")
         emt_inp[4].classList.remove("error")
     }
-
+ return false
 }
 function num(){
 
@@ -206,7 +208,7 @@ function num(){
         msg[5].classList.remove("msg")
         emt_inp[5].classList.remove("error")
     }
-
+ return false
 }
 
 function mal(){
@@ -227,7 +229,7 @@ function mal(){
         msg[6].classList.remove("msg")
         emt_inp[6].classList.remove("error")
     }
-
+return false
 }
 function pass(){
 
@@ -247,7 +249,7 @@ function pass(){
         msg[7].classList.remove("msg")
         emt_inp[7].classList.remove("error")
     }
-
+return false
 }
 
 function cnf_pass(){
@@ -267,6 +269,6 @@ function cnf_pass(){
         msg[8].classList.remove("msg")
         emt_inp[8].classList.remove("error")
     }
-
+return false
 }
 

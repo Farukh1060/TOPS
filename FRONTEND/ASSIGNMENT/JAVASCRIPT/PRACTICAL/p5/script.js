@@ -6,11 +6,13 @@ cl_me.addEventListener("click",function(){
     op_me.setAttribute("style","display: block;")
     cl_me.setAttribute("style","display: none;")
     menu.setAttribute("style","display: block;")
+    return false
 })
 op_me.addEventListener("click",function(){
     cl_me.setAttribute("style","display: block;")
     op_me.setAttribute("style","display: none;")
     menu.setAttribute("style","display: none;")
+    return false
 })
 // console.log(window.scrollY = 10)
 window.addEventListener("scroll",function(e){
@@ -20,5 +22,6 @@ window.addEventListener("scroll",function(e){
         document.querySelector(".nav").setAttribute("style","background-color:rgb(250, 153, 153)")
 
     }
+    return false
 })
 

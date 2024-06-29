@@ -4,7 +4,8 @@ document.getElementById("btn").addEventListener("click",sum_num);
 
 
 
-function sum_num(){
+function sum_num(e){
+    e.preventDefault()
     let sum =0;
     document.getElementById("result_value").innerHTML = ''
     let num = document.getElementById("num1").value
@@ -16,6 +17,6 @@ function sum_num(){
         num = Math.trunc(num/10);
     }
 
-    
+    return false
 }
 

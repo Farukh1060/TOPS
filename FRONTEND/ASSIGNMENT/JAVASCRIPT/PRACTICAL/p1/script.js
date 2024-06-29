@@ -4,7 +4,7 @@ function inp(){
     number = document.getElementById("num").value;
     console.log(number)
     myfun(number)
-
+    return false
 }
 function myfun(){
     document.getElementById("para").innerHTML = " "

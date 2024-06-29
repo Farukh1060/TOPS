@@ -44,7 +44,7 @@ let x=[];
             
             document.getElementById("res").innerText="fail"
        }
-
+       return false
     }
 
     //print pdf
@@ -58,4 +58,5 @@ let x=[];
             margin:10,
             filename: "myfile.pdf"
         })
+        return false
     })

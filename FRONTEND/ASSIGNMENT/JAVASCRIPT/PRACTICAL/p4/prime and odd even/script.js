@@ -1,7 +1,8 @@
 
 let btn = document.getElementById("submit")
 btn.addEventListener ("click",val)
-  function  val(){
+  function  val(e){
+    e.preventDefault()
     let number1 = parseFloat(document.getElementById('num1').value);
     let result;
     if(number1 % 2 == 0){
@@ -16,7 +17,8 @@ btn.addEventListener ("click",val)
 
 // debugger
 document.getElementById("prime").addEventListener("click",prime_chk)
-function prime_chk(){
+function prime_chk(e){
+    e.preventDefault()
     let number2 = parseFloat(document.getElementById("num2").value);
     // console.log(number2)
     let i = 2;

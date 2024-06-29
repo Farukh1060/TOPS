@@ -15,7 +15,7 @@ for(let i =0;i<btn.length;i++){
         }else if(btn[i].value == "ce"){
             inp.value = "";
         }
-       
+       return false
     })
 
 }

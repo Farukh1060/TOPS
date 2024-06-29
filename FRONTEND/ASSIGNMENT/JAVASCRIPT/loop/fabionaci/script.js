@@ -5,7 +5,8 @@ document.getElementById("btn").addEventListener("click",fabonice);
 // console.log(fabo[fabo.length-1])
 // console.log(fabo[fabo.length-2])
 
-function fabonice(){
+function fabonice(e){
+    e.preventDefault()
     let fabo = [];
     fabo[0]=0;
     fabo[1]=1;
@@ -26,7 +27,7 @@ function fabonice(){
         console.log(i)
     }
    
-    
+    return false;
 }
 
 

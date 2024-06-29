@@ -12,32 +12,32 @@ let sum =  document.getElementById("sum")
 sum.addEventListener ("click",function(){
     let ans = (Number (num1.value) + Number(num2.value));
     document.getElementById("ans").innerHTML = ans;
-
+    return false
 })
 
 let sub =  document.getElementById("sub")
 sub.addEventListener ("click",function(){
     let ans = (Number (num1.value) - Number(num2.value));
     document.getElementById("ans").innerHTML = ans;
-
+    return false
 })
 
 let mulit =  document.getElementById("multi")
 multi.addEventListener ("click",function(){
     let ans = (Number (num1.value) * Number(num2.value));
     document.getElementById("ans").innerHTML = ans;
-
+    return false
 })
 let divide =  document.getElementById("divide")
 divide.addEventListener ("click",function(){
     let ans = (Number (num1.value) / Number(num2.value));
     document.getElementById("ans").innerHTML = ans;
-
+    return false
 })
 
 let perc =  document.getElementById("perc")
 perc.addEventListener ("click",function(){
     let ans = (Number (num1.value) / Number(num2.value))*100;
     document.getElementById("ans").innerHTML = ans + "%";
-
+    return false    
 })

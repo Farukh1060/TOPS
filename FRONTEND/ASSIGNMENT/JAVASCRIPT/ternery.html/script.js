@@ -45,5 +45,6 @@ function check_min(){
   c = val[2];
   let ans = (a<b)?((a<c)?a:c):((b<c)? b:c)
   console.log(ans)
+  return false
 }
 

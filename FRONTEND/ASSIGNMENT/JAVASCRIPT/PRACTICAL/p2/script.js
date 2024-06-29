@@ -10,4 +10,5 @@ check.addEventListener("click",function(){
         password.setAttribute("type","password")
         
    }
+   return false
 })
