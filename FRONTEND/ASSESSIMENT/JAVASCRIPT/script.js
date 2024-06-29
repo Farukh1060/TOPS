@@ -53,9 +53,9 @@ for(let i=0;i<opt.length;i++){
                     creat_ul.appendChild(solt_pot)
                     
                 }
-                creat_ul.options[0].innerHTML="breakfast"
-                creat_ul.options[1].innerHTML="luncht"
-                creat_ul.options[2].innerHTML="dinner"
+                creat_ul.options[0].innerHTML="BREAKFAST"
+                creat_ul.options[1].innerHTML="LUNCH"
+                creat_ul.options[2].innerHTML="DINNER"
                 div.appendChild(creat_ul)
               restaurants.appendChild(div)
               arrow.classList.replace("fa-chevron-up","fa-chevron-down")
