@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .box{
     position: relative;
 }
@@ -10,4 +11,18 @@
 .line1{
     transform: rotate(45deg)  ;
     transform-origin: left bottom;
+=======
+.box{
+    position: relative;
+}
+.line{
+    width: 50px;
+    height: 50px;
+    border: 3px solid black;
+    position: absolute;
+}
+.line1{
+    transform: rotate(45deg)  ;
+    transform-origin: left bottom;
+>>>>>>> origin/main
 }

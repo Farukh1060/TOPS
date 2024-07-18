@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .container{
     border: 1px solid gray;
     padding: 20px 30px;
@@ -24,4 +25,32 @@ option{
 }
 select{
     /* background-color: brown; */
+=======
+.container{
+    border: 1px solid gray;
+    padding: 20px 30px;
+    margin-inline: auto;
+    text-transform: capitalize;
+    font-size: 20px;
+    width: max-content;
+}
+.form_container{
+    display: grid;
+    gap: 10px;
+}
+input,select{
+    font-size: 18px;
+    padding: 3px 5px;
+}
+
+input:focus , select:focus{
+    outline: none;
+}
+option{
+    border: 1px solid red;
+    background-color: aqua;
+}
+select{
+    /* background-color: brown; */
+>>>>>>> origin/main
 }
