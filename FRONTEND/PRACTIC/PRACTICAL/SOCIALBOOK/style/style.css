@@ -5,12 +5,13 @@
 }
 
 .container {
-  width: calc(100% - 150px);
+  width: 1150px;
   margin-inline: auto;
 }
 
 .nav_bar_container {
   background-color: rgb(47, 135, 249);
+  border: 1px solid red;
 }
 .nav_bar_container .nav_bar {
   display: flex;
@@ -48,7 +49,6 @@
   display: flex;
 }
 .nav_bar_container .nav_bar .search_profile .search_bar .search_inp input {
-  flex-shrink: 2;
   border-radius: 25px;
   max-width: 300px;
   font-size: 20px;
