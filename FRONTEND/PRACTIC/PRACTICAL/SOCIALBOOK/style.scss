@@ -1,5 +1,208 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: calc(100vw - 150px);
+  margin-inline: auto;
+}
+.nav_bar_container {
+  display: grid;
+  place-items: center;
+  background-color: rgb(47, 135, 249);
+  // background-color: rgb(11, 78, 78);
+  // border: 1px solid red;
+  .nav_bar {
+    // border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding-block: 5px;
+
+    .logo {
+      flex-grow: 1;
+      flex-shrink: 1.2;
+      img {
+        flex-basis: 160px;
+        max-width: 160px;
+      }
+    }
+    .nav_icon {
+      flex-grow: 10;
+      flex-shrink: 3;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      img {
+        width: 30px;
+      }
+    }
+    .search_profile {
+      // border: 1px solid red;
+      flex-grow: 1;
+      flex-shrink: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      .search_bar {
+        display: flex;
+        position: relative;
+        .search_inp {
+          display: flex;
+
+          input {
+            border-radius: 25px;
+            width: 100%;
+            font-size: 20px;
+            padding: 4px 35px;
+            outline: none;
+            border: none;
+          }
+        }
+        .search_img {
+          position: absolute;
+          top: 5px;
+          left: 6px;
+          img {
+            width: 20px;
+          }
+        }
+      }
+      .profile_container {
+        position: relative;
+
+        .profile_img {
+          img {
+            display: block;
+            border-radius: 50%;
+            max-width: 40px;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 3px;
+            background-color: green;
+            // border: 2px solid black;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        width: calc(100vw - 50px);
+        margin-inline: auto;
+      }
+      .search_profile {
+        display: none;
+      }
+      .nav_icon {
+        flex-grow: 0;
+      }
+    }
+  }
+}
+
+.sm {
+  margin-top: 2px;
+
+  display: none;
+  // border: 1px solid red;
+  .search_profile {
+    // border: 1px solid red;
+    flex-grow: 1;
+    flex-shrink: 2;
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    .search_bar {
+      display: flex;
+      position: relative;
+      .search_inp {
+        display: flex;
+
+        input {
+          border: 1px solid black;
+          border-radius: 25px;
+          width: 100%;
+          font-size: 20px;
+          padding: 4px 35px;
+          outline: none;
+        }
+      }
+      .search_img {
+        position: absolute;
+        top: 5px;
+        left: 6px;
+        img {
+          width: 20px;
+        }
+      }
+    }
+    
+    .profile_container {
+      position: relative;
+
+      .profile_img {
+        img {
+          display: block;
+          border-radius: 50%;
+          max-width: 40px;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 3px;
+          background-color: green;
+          // border: 2px solid black;
+          border-radius: 50%;
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: calc(100vw - 50px);
+    margin-inline: auto;
+  }
+  .sm {
+    display: block;
+  }
+}
+
+.background{
+  background-color: #ccc;
+  
+  
+  .partision{
+    display: grid;
+    padding-top: 8px;
+    height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2px;
+    .left{
+      background-color: antiquewhite;
+    }
+    
+    .mid{
+      background-color: antiquewhite;
+      
+    }
+    .right{
+      background-color: antiquewhite;
+    }
+  }
+  
 }
