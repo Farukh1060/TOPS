@@ -177,7 +177,7 @@ a {
           position: absolute;
           top: 0;
           right: 0px;
-          background-color:#41db51;
+          background-color: #41db51;
           border: 2px solid wheat;
           border-radius: 50%;
           width: 10px;
@@ -207,7 +207,6 @@ a {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2px;
     .left {
-      
       .rowflx {
         display: flex;
         align-items: center;
@@ -221,7 +220,6 @@ a {
         justify-content: space-around;
         margin-bottom: 20px;
         padding-bottom: 10px;
-        
       }
 
       img {
@@ -230,22 +228,105 @@ a {
 
       .left_top {
         position: relative;
-       &::after{
-        position: absolute;
-        content: "";
-        bottom: 0;
-        height: 2px ;
-        width: 70%;
-        background-color: black;
-       }
-
-      }
-      .left_bottom {
+        &::after {
+          position: absolute;
+          content: "";
+          bottom: 0;
+          height: 2px;
+          width: 70%;
+          background-color: black;
+        }
       }
     }
 
     .mid {
-      background-color: antiquewhite;
+      .status_bar_container {
+        .status_add {
+          position: relative;
+          width: max-content;
+          .status_add_img {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            img {
+              display: block;
+              height: 200px;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              background-image: linear-gradient(
+                rgba(255, 255, 255, 0.1) 50%,
+                rgba(0, 0, 0, 0.8)
+              );
+            }
+          }
+          .status_content {
+            position: absolute;
+            bottom: 10px;
+            left: 28px;
+            text-align: center;
+            .add_icon {
+              img {
+                width: 35px;
+              }
+            }
+            .add_content {
+              p {
+                font-size: 14px;
+                color: white;
+              }
+            }
+          }
+        }
+        .status_add {
+          position: relative;
+          width: max-content;
+          .status_add_img {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            img {
+              display: block;
+              height: 200px;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              // z-index: 10;
+              background-image: linear-gradient(
+                rgba(255, 255, 255, 0.1) 50%,
+                rgba(0, 0, 0, 0.8)
+              );
+            }
+          }
+          .status_content {
+            position: absolute;
+            bottom: 10px;
+            left: 28px;
+            text-align: center;
+            .add_icon {
+              img {
+                width: 35px;
+              }
+            }
+            .add_content {
+              p {
+                font-size: 14px;
+                color: white;
+              }
+            }
+          }
+        }
+      }
     }
     .right {
       background-color: antiquewhite;
