@@ -7,6 +7,21 @@
   width: calc(100vw - 150px);
   margin-inline: auto;
 }
+
+p {
+  text-transform: capitalize;
+  color: rgb(31, 31, 31);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+a {
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 18px;
+  color: rgb(47, 135, 249);
+}
+
 .nav_bar_container {
   display: grid;
   place-items: center;
@@ -84,9 +99,9 @@
             content: "";
             position: absolute;
             top: 0;
-            right: 3px;
-            background-color: green;
-            // border: 2px solid black;
+            right: 0px;
+            background-color: #41db51;
+            border: 2px solid wheat;
             border-radius: 50%;
             width: 10px;
             height: 10px;
@@ -147,7 +162,7 @@
         }
       }
     }
-    
+
     .profile_container {
       position: relative;
 
@@ -161,9 +176,9 @@
           content: "";
           position: absolute;
           top: 0;
-          right: 3px;
-          background-color: green;
-          // border: 2px solid black;
+          right: 0px;
+          background-color: #41db51;
+          border: 2px solid wheat;
           border-radius: 50%;
           width: 10px;
           height: 10px;
@@ -182,27 +197,139 @@
   }
 }
 
-.background{
+.background {
   background-color: #ccc;
-  
-  
-  .partision{
+
+  .partision {
     display: grid;
     padding-top: 8px;
-    height: 100vh;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2px;
-    .left{
-      background-color: antiquewhite;
+    // height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2px;
+    .left {
+      .rowflx {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        padding-block: 10px;
+      }
+      .colflx {
+        // height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+      }
+
+      img {
+        width: 30px;
+      }
+
+      .left_top {
+        position: relative;
+        &::after {
+          position: absolute;
+          content: "";
+          bottom: 0;
+          height: 2px;
+          width: 70%;
+          background-color: black;
+        }
+      }
     }
-    
-    .mid{
-      background-color: antiquewhite;
-      
+
+    .mid {
+      .status_bar_container {
+        .status_add {
+          position: relative;
+          width: max-content;
+          .status_add_img {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            img {
+              display: block;
+              height: 200px;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              background-image: linear-gradient(
+                rgba(255, 255, 255, 0.1) 50%,
+                rgba(0, 0, 0, 0.8)
+              );
+            }
+          }
+          .status_content {
+            position: absolute;
+            bottom: 10px;
+            left: 28px;
+            text-align: center;
+            .add_icon {
+              img {
+                width: 35px;
+              }
+            }
+            .add_content {
+              p {
+                font-size: 14px;
+                color: white;
+              }
+            }
+          }
+        }
+        .status_add {
+          position: relative;
+          width: max-content;
+          .status_add_img {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            img {
+              display: block;
+              height: 200px;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              // z-index: 10;
+              background-image: linear-gradient(
+                rgba(255, 255, 255, 0.1) 50%,
+                rgba(0, 0, 0, 0.8)
+              );
+            }
+          }
+          .status_content {
+            position: absolute;
+            bottom: 10px;
+            left: 28px;
+            text-align: center;
+            .add_icon {
+              img {
+                width: 35px;
+              }
+            }
+            .add_content {
+              p {
+                font-size: 14px;
+                color: white;
+              }
+            }
+          }
+        }
+      }
     }
-    .right{
+    .right {
       background-color: antiquewhite;
     }
   }
-  
 }
