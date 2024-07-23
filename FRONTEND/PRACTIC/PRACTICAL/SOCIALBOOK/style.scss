@@ -23,6 +23,7 @@ a {
 }
 
 .nav_bar_container {
+  // visibility: hidden;
   display: grid;
   place-items: center;
   background-color: rgb(47, 135, 249);
@@ -126,6 +127,7 @@ a {
 }
 
 .sm {
+  // visibility: hidden;
   margin-top: 2px;
 
   display: none;
@@ -203,10 +205,11 @@ a {
   .partision {
     display: grid;
     padding-top: 8px;
-    // height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr;
+    min-height: 100vh;
+    grid-template-columns: 1fr 2fr 1fr;
     gap: 2px;
     .left {
+      // border: 1px solid red;
       .rowflx {
         display: flex;
         align-items: center;
@@ -214,7 +217,7 @@ a {
         padding-block: 10px;
       }
       .colflx {
-        // height: 50%;
+        height: 50%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -240,52 +243,34 @@ a {
     }
 
     .mid {
+      padding: 10px;
+      // border: 1px solid red;
+      // visibility: hidden;
       .status_bar_container {
-        .status_add {
-          position: relative;
-          width: max-content;
-          .status_add_img {
-            position: relative;
-            border-radius: 10px;
-            overflow: hidden;
-            img {
-              display: block;
-              height: 200px;
-            }
-            &::after {
-              content: "";
-              position: absolute;
-              top: 0;
-              right: 0;
-              bottom: 0;
-              left: 0;
-              background-image: linear-gradient(
-                rgba(255, 255, 255, 0.1) 50%,
-                rgba(0, 0, 0, 0.8)
-              );
-            }
-          }
-          .status_content {
-            position: absolute;
-            bottom: 10px;
-            left: 28px;
+        // border: 1px solid red;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        .add_post_posi{
+          position: absolute;
+          bottom: 10px;
+          left: 28px;
+          text-align: center;
+       
+            
+        }
+        .added_status_profile{
+          position: absolute;
+            top: 10px;
+            left: 10px;
             text-align: center;
-            .add_icon {
-              img {
-                width: 35px;
-              }
-            }
-            .add_content {
-              p {
-                font-size: 14px;
-                color: white;
-              }
-            }
-          }
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid rgb(47, 135, 249);
         }
         .status_add {
           position: relative;
-          width: max-content;
+          // width: max-content;
           .status_add_img {
             position: relative;
             border-radius: 10px;
@@ -301,7 +286,6 @@ a {
               right: 0;
               bottom: 0;
               left: 0;
-              // z-index: 10;
               background-image: linear-gradient(
                 rgba(255, 255, 255, 0.1) 50%,
                 rgba(0, 0, 0, 0.8)
@@ -309,10 +293,10 @@ a {
             }
           }
           .status_content {
-            position: absolute;
-            bottom: 10px;
-            left: 28px;
-            text-align: center;
+            // position: absolute;
+            // bottom: 10px;
+            // left: 28px;
+            // text-align: center;
             .add_icon {
               img {
                 width: 35px;
@@ -327,9 +311,29 @@ a {
           }
         }
       }
+      // .user_profil{
+      //   .user_profile_detail_container{
+          
+      //   }
+      // }
+      // .user_uplode{
+      //   .describe{
+
+      //   }
+      // }
+      
     }
     .right {
+      // border: 1px solid red;
       background-color: antiquewhite;
     }
   }
+
+  @media screen and (min-width: 1400px) {
+    .container {
+      width: 1250px;
+      margin-inline: auto;
+    }
+  }
 }
+

@@ -185,7 +185,8 @@ a {
 .background .partision {
   display: grid;
   padding-top: 8px;
-  grid-template-columns: 1fr 1fr 1fr;
+  min-height: 100vh;
+  grid-template-columns: 1fr 2fr 1fr;
   gap: 2px;
 }
 .background .partision .left .rowflx {
@@ -195,6 +196,7 @@ a {
   padding-block: 10px;
 }
 .background .partision .left .colflx {
+  height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -215,9 +217,31 @@ a {
   width: 70%;
   background-color: black;
 }
+.background .partision .mid {
+  padding: 10px;
+}
+.background .partision .mid .status_bar_container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.background .partision .mid .status_bar_container .add_post_posi {
+  position: absolute;
+  bottom: 10px;
+  left: 28px;
+  text-align: center;
+}
+.background .partision .mid .status_bar_container .added_status_profile {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  text-align: center;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgb(47, 135, 249);
+}
 .background .partision .mid .status_bar_container .status_add {
   position: relative;
-  width: max-content;
 }
 .background .partision .mid .status_bar_container .status_add .status_add_img {
   position: relative;
@@ -236,47 +260,6 @@ a {
   bottom: 0;
   left: 0;
   background-image: linear-gradient(rgba(255, 255, 255, 0.1) 50%, rgba(0, 0, 0, 0.8));
-}
-.background .partision .mid .status_bar_container .status_add .status_content {
-  position: absolute;
-  bottom: 10px;
-  left: 28px;
-  text-align: center;
-}
-.background .partision .mid .status_bar_container .status_add .status_content .add_icon img {
-  width: 35px;
-}
-.background .partision .mid .status_bar_container .status_add .status_content .add_content p {
-  font-size: 14px;
-  color: white;
-}
-.background .partision .mid .status_bar_container .status_add {
-  position: relative;
-  width: max-content;
-}
-.background .partision .mid .status_bar_container .status_add .status_add_img {
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.background .partision .mid .status_bar_container .status_add .status_add_img img {
-  display: block;
-  height: 200px;
-}
-.background .partision .mid .status_bar_container .status_add .status_add_img::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.1) 50%, rgba(0, 0, 0, 0.8));
-}
-.background .partision .mid .status_bar_container .status_add .status_content {
-  position: absolute;
-  bottom: 10px;
-  left: 28px;
-  text-align: center;
 }
 .background .partision .mid .status_bar_container .status_add .status_content .add_icon img {
   width: 35px;
@@ -287,4 +270,10 @@ a {
 }
 .background .partision .right {
   background-color: antiquewhite;
+}
+@media screen and (min-width: 1400px) {
+  .background .container {
+    width: 1250px;
+    margin-inline: auto;
+  }
 }
