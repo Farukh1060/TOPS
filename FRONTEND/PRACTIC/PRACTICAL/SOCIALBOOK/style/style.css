@@ -23,6 +23,17 @@ a {
   color: rgb(47, 135, 249);
 }
 
+.dflex {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-block: 10px;
+}
+
+.dblock {
+  display: none;
+}
+
 .nav_bar_container {
   position: sticky;
   top: 0px;
@@ -112,11 +123,55 @@ a {
   top: 126%;
   right: 8px;
   background-color: white;
+  padding: 10px;
   width: 300px;
-  height: 200px;
 }
-.nav_bar_container .nav_bar .search_profile .setting_container .setting {
-  border: 1px solid red;
+.nav_bar_container .nav_bar .search_profile .setting_container .setting .setting_profil,
+.nav_bar_container .nav_bar .search_profile .setting_container .setting .feedback_profil {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav_bar_container .nav_bar .search_profile .setting_container .setting .setting_profil .setting_profile_img,
+.nav_bar_container .nav_bar .search_profile .setting_container .setting .setting_profil .feedback_profile_img,
+.nav_bar_container .nav_bar .search_profile .setting_container .setting .feedback_profil .setting_profile_img,
+.nav_bar_container .nav_bar .search_profile .setting_container .setting .feedback_profil .feedback_profile_img {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 45px;
+  margin-block: 10px;
+}
+.nav_bar_container .nav_bar .search_profile .setting_container .setting .setting_profil .setting_profile_img img,
+.nav_bar_container .nav_bar .search_profile .setting_container .setting .setting_profil .feedback_profile_img img,
+.nav_bar_container .nav_bar .search_profile .setting_container .setting .feedback_profil .setting_profile_img img,
+.nav_bar_container .nav_bar .search_profile .setting_container .setting .feedback_profil .feedback_profile_img img {
+  width: 100%;
+}
+.nav_bar_container .nav_bar .search_profile .setting_container .setting .setting_profil .btn,
+.nav_bar_container .nav_bar .search_profile .setting_container .setting .feedback_profil .btn {
+  position: relative;
+  width: 45px;
+  height: 26px;
+  border: 2px solid #ccc;
+  padding: 1px 2px;
+  border-radius: 15px;
+}
+.nav_bar_container .nav_bar .search_profile .setting_container .setting .setting_profil .btn .btn_inner,
+.nav_bar_container .nav_bar .search_profile .setting_container .setting .feedback_profil .btn .btn_inner {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: black;
+  border-radius: 50%;
+}
+.nav_bar_container .nav_bar .search_profile .setting_container .setting .setting_profil .btn .togl,
+.nav_bar_container .nav_bar .search_profile .setting_container .setting .feedback_profil .btn .togl {
+  right: 2px;
+  background-color: #ccc;
+}
+.nav_bar_container .nav_bar .search_profile .setting_container .setting .setting_icon img {
+  width: 45px;
 }
 @media screen and (max-width: 768px) {
   .nav_bar_container .nav_bar .container {
@@ -445,4 +500,41 @@ a {
     width: 1300px;
     margin-inline: auto;
   }
+}
+
+.hero_profil img {
+  width: 100%;
+}
+
+.hero_profil_detail_container {
+  display: flex;
+  justify-content: space-between;
+}
+.hero_profil_detail_container .cover {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hero_profil_detail_container .cover .hero_profil_detail_img img {
+  width: 100px;
+}
+.hero_profil_detail_container .cover .hero_profil_detail_headding .friends_profile_container img {
+  width: 45px;
+  border-radius: 50%;
+}
+.hero_profil_detail_container .prfile_btn_container {
+  display: flex;
+  align-items: center;
+}
+.hero_profil_detail_container .prfile_btn_container img {
+  display: inline-block;
+  width: 20px;
+}
+.hero_profil_detail_container .prfile_btn_container .add_friends_container .add_friends {
+  background-color: #ccc;
+  padding: 10px 15px;
+}
+.hero_profil_detail_container .prfile_btn_container .msg_friends_container .msg_friends {
+  background-color: blue;
+  padding: 10px 15px;
 }
