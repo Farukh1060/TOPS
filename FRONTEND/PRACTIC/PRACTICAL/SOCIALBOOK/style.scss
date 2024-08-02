@@ -1,8 +1,18 @@
+
+@font-face {
+  font-family: popp;
+  src: url(../FONT/Poppins/Poppins-Regular.ttf);
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-transform: capitalize;
+}
+body{
+  background-color: #ccc;
+  font-family: popp;
+ 
 }
 .container {
   width: calc(100vw - 100px);
@@ -15,6 +25,9 @@ p {
   font-size: 20px;
   font-weight: 500;
 }
+.mb{
+ margin-bottom: 10px;
+}
 
 a {
   text-transform: capitalize;
@@ -26,7 +39,7 @@ a {
   display: flex;
   gap: 15px;
   align-items: center;
-  margin-block: 10px;
+  // margin-block: 10px;
 }
 .dblock{
   display: none;
@@ -36,7 +49,7 @@ a {
   position: sticky;
   top: 0px;
   z-index: 1;
-  // visibility: hidden;
+  // visibility: hidden1;
   display: grid;
   place-items: center;
   background-color: rgb(47, 135, 249);
@@ -48,7 +61,7 @@ a {
     align-items: center;
     justify-content: space-between;
     gap: 30px;
-    padding-block: 5px;
+    // padding-block: 5px;
 
     .logo {
       flex-grow: 1;
@@ -145,7 +158,7 @@ a {
               border-radius: 50%;
               overflow: hidden;
               width: 45px;
-              margin-block: 10px;
+              // margin-block: 10px;
               img {
                 width: 100%;
               }
@@ -196,8 +209,8 @@ a {
 }
 
 .sm {
-  // visibility: hidden;
-  margin-top: 2px;
+  // visibility: hidden1;
+  // margin-top: 2px;
 
   display: none;
   // border: 1px solid red;
@@ -270,20 +283,18 @@ a {
 
 .background {
   background-color: #ccc;
-
+  .partision1{
+    grid-template-columns: 1fr 2fr 1fr;
+  }
   .partision {
     display: grid;
-    padding-top: 8px;
-    // min-height: 100vh;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 2px;
+    gap: 10px;
     .left {
-      // visibility: hidden;
-      // border: 1px solid red;
+      // visibility: hidden1;
       position: sticky;
-      top: 70px;
+      top: 53px;
       align-self: flex-start;
-      max-height: 90vh;
+      max-height: 100vh;
       .rowflx {
         display: flex;
         align-items: center;
@@ -295,7 +306,7 @@ a {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
         padding-bottom: 10px;
       }
 
@@ -317,11 +328,11 @@ a {
     }
 
     .mid {
-      padding: 10px;
+      // padding: 10px;
       // border: 1px solid red;
-      // visibility: hidden;
+      visibility: hidden1;
       .status_bar_container {
-        // visibility: hidden;
+        // visibility: hidden1;
         // border: 1px solid red;
         display: flex;
         justify-content: space-between;
@@ -387,7 +398,7 @@ a {
       .user_profil {
         background-color: white;
         padding: 10px;
-        margin-top: 10px;
+        // margin-top: 10px;
         border-radius: 8px;
         .user_profile_detail_container {
           display: flex;
@@ -408,7 +419,7 @@ a {
         .user_uplode {
           margin-inline: 55px;
           .describe {
-            margin-block: 10px;
+            // margin-block: 10px;
             h3 {
               font-weight: 400;
             }
@@ -447,12 +458,12 @@ a {
         //
 
         .post_list {
-          margin-block: 10px;
+          margin-bottom: 10px;
           background-color: white;
           padding: 10px;
           border-radius: 8px;
           .post_headding {
-            margin-block: 10px;
+            // margin-block: 10px;
             display: flex;
             gap: 10px;
             justify-content: space-between;
@@ -477,7 +488,7 @@ a {
               display: flex;
               gap: 25px;
               align-items: center;
-              margin: 15px;
+              // margin: 15px;
               img {
                 width: 25px;
               }
@@ -488,10 +499,9 @@ a {
     }
     .right {
       position: sticky;
-      top: 70px;
+      top: 53px;
       align-self: flex-start;
-      // max-height: 90vh;
-      // border: 1px solid red;
+      max-height: 100vh;
       background-color: white;
       border-radius: 8px;
       padding: 25px 15px;
@@ -509,7 +519,7 @@ a {
 
         .event_list_container {
           .events {
-            margin-top: 10px;
+            // margin-top: 10px;
             display: flex;
             gap: 20px;
             .event_date {
@@ -548,7 +558,7 @@ a {
         .advertisement_headding_container {
           display: flex;
           justify-content: space-between;
-          margin-block: 10px;
+          // margin-block: 10px;
         }
         .add_img {
           img {
@@ -566,7 +576,7 @@ a {
             // position: relative;
             display: flex;
             gap: 15px;
-            margin-top: 10px;
+            // margin-top: 10px;
             align-items: center;
             .online_mem_img {
               position: relative;
@@ -605,6 +615,7 @@ a {
 
 // ------------------------------profile.html--------------------
 .hero_profil{
+  visibility: hidden1;
   img{
     width: 100%;
   }
@@ -612,17 +623,24 @@ a {
 .hero_profil_detail_container{
   display: flex;
   justify-content: space-between;
+  background-color: white;
+  // margin-block: 5px;
+  padding: 15px;
+  visibility: hidden1;
   .cover{
+    // visibility: hidden1;
     display: flex;
   align-items: center;
   gap: 10px;
     .hero_profil_detail_img{
+      // visibility: hidden1;
       // flex-grow: 1;
       img{
         width: 100px;
       }
     }
     .hero_profil_detail_headding{
+      // visibility: hidden1;
       // flex-grow: 2;
       .friends_profile_container{
         img{
@@ -635,12 +653,20 @@ a {
   }
 
   .prfile_btn_container{
-    // flex-grow: 1;
+    // visibility: hidden1;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .btn{
+      display: flex;
     align-items: center;
+    gap: 10px;
     img{
-      display: inline-block;
+      // display: inline;
       width: 20px;
+      height: 20px;
+      margin-inline: 5px;
+    
     }
     .add_friends_container{
       .add_friends{
@@ -649,10 +675,80 @@ a {
       }
     }
     .msg_friends_container{
+
       .msg_friends{
         background-color: blue;
         padding: 10px 15px;
+        color: white;
       }
     }
+    }
+    .icon{
+      align-self: flex-end;
+      background-color: #ccc;
+      border-radius: 10px;
+      padding: 5px 10px;
+    }
+    
+  }
+}
+.profile_intro_feed{
+ display: flex;
+gap: 10px;
+ 
+  .intro_photo_friend_container{
+    // margin-block: 10px;
+
+    align-self: flex-start;
+    max-width: 340px;
+   
+    .intro_container{
+      .into{
+        background-color: white;
+        padding: 10px;
+        border-radius: 8px;
+        .intro_headding{
+          border-bottom: 1px solid #ccc;
+          padding-bottom: 20px;
+          p{
+            padding-block: 5px;
+            text-align: center;
+          }
+        }
+        .into_detail_container{
+          .i_d_c{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            // margin-block: 6px;
+            img{
+              width: 35px;
+            }
+          
+          }
+        }
+      }
+      .user_photo_container{
+        padding: 10px;
+        background-color: white;
+        // margin-top: 10px;
+        border-radius: 8px;
+        .user_photo_heading{
+          display: flex;
+          justify-content:space-between ;
+        }
+        .user_photo{
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 10px;
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .background{
+    flex-basis: 100%;
   }
 }
