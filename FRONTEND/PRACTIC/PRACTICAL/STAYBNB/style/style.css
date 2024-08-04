@@ -1,0 +1,10 @@
+.navbar_container {
+  height: 100vh;
+  background-image: url(images/banner.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.navbar_container .navbar-brand img {
+  width: 110px;
+}
