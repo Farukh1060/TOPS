@@ -61,6 +61,7 @@ a {
 .dblock{
   display: none;
 }
+// -----------------------------------nav_bar---------------------------
 
 .nav_bar_container {
   position: sticky;
@@ -95,6 +96,7 @@ a {
         width: 30px;
       }
     }
+    // ------------------------search and profile--------------
     .search_profile {
       position: relative;
       // border: 1px solid red;
@@ -150,7 +152,7 @@ a {
           }
         }
       }
-
+// ------------------------------------ drop down------------------------
       .setting_container {
         position: absolute;
         top: 126%;
@@ -174,6 +176,7 @@ a {
                 width: 45px;
               }
             }
+            // -----------------------toggle button-------------------------
             .btn{
               position: relative;
               width: 45px ;
@@ -189,6 +192,7 @@ a {
                 background-color: black;
                 border-radius: 50%;
               }
+              // ----------------------toggle class---------------------------
               .togl{
                 right: 2px;
                 background-color: #ccc;
@@ -291,21 +295,23 @@ a {
     display: block;
   }
 }
-
+// ----------------------------main containt division-----------------------
 .background {
-  background-color: var(--bg-color);
+  background-color: var(--body-color);
   .partision1{
     grid-template-columns: 1fr 2fr 1fr;
   }
   .partision {
     display: grid;
     gap: 10px;
+    // -------------------------------left side bar---------------------
     .left {
       // visibility: hidden1;
       position: sticky;
       top: 53px;
       align-self: flex-start;
       max-height: 100vh;
+      // ---------------use to arrange containt in left top and bottom-----------------------
       .rowflx {
         display: flex;
         align-items: center;
@@ -337,9 +343,10 @@ a {
         }
       }
     }
-
+// ----------------------------middle bar----------------------------
     .mid {
       visibility: hidden1;
+      // -----------------------------status-----------------------------
       .status_bar_container {
         // visibility: hidden1;
         display: flex;
@@ -403,6 +410,7 @@ a {
           }
         }
       }
+      // ---------------------use detail,uplode feeling---------------------------------
       .user_profil {
         background-color: var(--bg-color);
         padding: 10px;
@@ -463,6 +471,7 @@ a {
           }
         }
       }
+      // --------------------------post---------------------------------
       .post_container {
         // margin-block: 10px;
         //
@@ -508,6 +517,7 @@ a {
         }
       }
     }
+    // -----------------------right side bar-----------------------
     .right {
       position: sticky;
       top: 53px;
@@ -516,6 +526,7 @@ a {
       background-color: var(--bg-color);
       border-radius: 8px;
       padding: 20px 15px;
+      // --------------------------event-------------------------------
       .events_container {
         .event_headding_container {
           display: flex;
@@ -534,10 +545,12 @@ a {
             display: flex;
             gap: 20px;
             .event_date {
+              align-self: center;
               display: flex;
               flex-direction: column;
               justify-content: space-between;
               box-shadow: 2px 2px 6px #ccc;
+
               overflow: hidden;
               border-radius: 8px;
               .date {
@@ -565,6 +578,7 @@ a {
           }
         }
       }
+      // ------------------------------advertisement----------------------
       .advertisement_container {
         .advertisement_headding_container {
           display: flex;
@@ -577,6 +591,7 @@ a {
           }
         }
       }
+      // -------------------------------online menber--------------------
       .conversation_container {
         .conversation_headding_container {
           display: flex;

@@ -275,7 +275,7 @@ a {
   }
 }
 .background {
-  background-color: var(--bg-color);
+  background-color: var(--body-color);
 }
 .background .partision1 {
   grid-template-columns: 1fr 2fr 1fr;
@@ -461,6 +461,7 @@ a {
   gap: 20px;
 }
 .background .partision .right .events_container .event_list_container .events .event_date {
+  align-self: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
