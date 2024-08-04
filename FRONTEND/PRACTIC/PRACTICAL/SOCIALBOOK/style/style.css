@@ -3,17 +3,17 @@
   src: url(font/Poppins-Light.ttf);
 }
 :root {
-  --body-color:#efefef;
-  --nav-color:#1876f2;
-  --bg-color:#fff;
-  --text-color:#1c0c0c;
+  --body-color: #efefef;
+  --nav-color: #1876f2;
+  --bg-color: #fff;
+  --text-color: #1c0c0c;
 }
 
 .dark_them {
-  --body-color:#0a0a0a;
-  --nav-color:#000;
-  --bg-color:#000;
-  --text-color:#fff;
+  --body-color: #0a0a0a;
+  --nav-color: #000;
+  --bg-color: #000;
+  --text-color: #fff;
 }
 
 * {
@@ -199,18 +199,6 @@ a {
 .nav_bar_container .nav_bar .search_profile .setting_container .setting .setting_icon img {
   width: 45px;
 }
-@media screen and (max-width: 768px) {
-  .nav_bar_container .nav_bar .container {
-    width: calc(100vw - 50px);
-    margin-inline: auto;
-  }
-  .nav_bar_container .nav_bar .search_profile {
-    display: none;
-  }
-  .nav_bar_container .nav_bar .nav_icon {
-    flex-grow: 0;
-  }
-}
 
 .sm {
   display: none;
@@ -265,17 +253,8 @@ a {
   height: 10px;
 }
 
-@media screen and (max-width: 768px) {
-  .container {
-    width: calc(100vw - 50px);
-    margin-inline: auto;
-  }
-  .sm {
-    display: block;
-  }
-}
 .background {
-  background-color: var(--bg-color);
+  background-color: var(--body-color);
 }
 .background .partision1 {
   grid-template-columns: 1fr 2fr 1fr;
@@ -348,8 +327,8 @@ a {
   overflow: hidden;
 }
 .background .partision .mid .status_bar_container .status_add .status_add_img img {
+  width: 100%;
   display: block;
-  height: 200px;
 }
 .background .partision .mid .status_bar_container .status_add .status_add_img::after {
   content: "";
@@ -461,6 +440,7 @@ a {
   gap: 20px;
 }
 .background .partision .right .events_container .event_list_container .events .event_date {
+  align-self: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -590,7 +570,7 @@ a {
   border-radius: 8px;
 }
 .profile_intro_feed .intro_photo_friend_container .intro_container .into .intro_headding {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #bd6d6d;
   padding-bottom: 20px;
 }
 .profile_intro_feed .intro_photo_friend_container .intro_container .into .intro_headding p {
@@ -624,4 +604,44 @@ a {
 }
 .profile_intro_feed .background {
   flex-basis: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    width: calc(100vw - 50px);
+    margin-inline: auto;
+  }
+  .left {
+    display: none;
+  }
+  .right {
+    display: none;
+  }
+  .nav_bar_container .nav_bar .logo img {
+    max-width: 110px;
+  }
+  .nav_bar_container .nav_bar .nav_icon img {
+    width: 20px;
+  }
+  .nav_bar_container .nav_bar .search_profile .search_bar {
+    display: none;
+  }
+  .nav_bar_container .nav_bar .search_profile .profile_container .profile_img img {
+    max-width: 30px;
+  }
+  .background .partision {
+    display: block;
+  }
+  .background .partision .mid .user_profil .user_uplode .user_uplode_things {
+    flex-wrap: wrap;
+  }
+  .background .partision .mid .status_bar_container .status_add .status_content .add_icon img {
+    width: 20px;
+  }
+  .background .partision .mid .status_bar_container .add_post_posi {
+    left: 10px;
+  }
+  .background .partision .mid .status_bar_container .status_add .status_content .add_content p {
+    font-size: 12px;
+  }
 }
