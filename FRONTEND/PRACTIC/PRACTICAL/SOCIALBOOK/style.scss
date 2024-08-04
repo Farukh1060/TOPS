@@ -3,6 +3,18 @@
   font-family: poppin;
   src: url(font/Poppins-Light.ttf);
 }
+:root{
+  --body-color:#efefef;
+  --nav-color:#1876f2;
+  --bg-color:#fff;
+  --text-color:#1c0c0c;
+}
+.dark_them{
+  --body-color:#0a0a0a;
+  --nav-color:#000;
+  --bg-color:#000;
+  --text-color:#fff;
+}
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +22,7 @@
   text-transform: capitalize;
 }
 body{
-  background-color: #ccc;
+  background-color: var(--body-color);
   font-family: poppin;
  
 }
@@ -20,15 +32,12 @@ body{
 }
 
 p {
-  // text-transform: capitalize;
-  color: rgb(31, 31, 31);
-  // font-size: 20px;
-  // font-weight: 500;
+  color: var(--text-color);
 }
 h3{
   font-family: poppin;
   font-weight: 600;
-  color: rgb(56, 45, 45);
+  color: var(--text-color);
 }
 .mb{
  margin-bottom: 10px;
@@ -60,11 +69,8 @@ a {
   // visibility: hidden1;
   display: grid;
   place-items: center;
-  background-color: rgb(47, 135, 249);
-  // background-color: rgb(11, 78, 78);
-  // border: 1px solid red;
+  background-color: var(--nav-color);
   .nav_bar {
-    // border: 1px solid red;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -149,10 +155,9 @@ a {
         position: absolute;
         top: 126%;
         right: 8px;
-        background-color: white;
+        background-color: var(--bg-color);
         padding: 10px;
         width: 300px;
-        // height: 200px;
         .setting {
           // border: 1px solid red;
           .setting_profil,
@@ -163,12 +168,10 @@ a {
             align-items: center;
             .setting_profile_img,
             .feedback_profile_img {
-              border-radius: 50%;
-              overflow: hidden;
-              width: 45px;
-              // margin-block: 10px;
               img {
-                width: 100%;
+                display: block;
+                border-radius: 25px;
+                width: 45px;
               }
             }
             .btn{
@@ -290,7 +293,7 @@ a {
 }
 
 .background {
-  background-color: #ccc;
+  background-color: var(--bg-color);
   .partision1{
     grid-template-columns: 1fr 2fr 1fr;
   }
@@ -336,12 +339,9 @@ a {
     }
 
     .mid {
-      // padding: 10px;
-      // border: 1px solid red;
       visibility: hidden1;
       .status_bar_container {
         // visibility: hidden1;
-        // border: 1px solid red;
         display: flex;
         justify-content: space-between;
         gap: 10px;
@@ -404,7 +404,7 @@ a {
         }
       }
       .user_profil {
-        background-color: white;
+        background-color: var(--bg-color);
         padding: 10px;
         // margin-top: 10px;
         border-radius: 8px;
@@ -418,8 +418,9 @@ a {
             }
           }
           .user_profile_detail {
-            h2 {
-              font-weight: 400;
+            h3 {
+              font-size: 25px;
+              font-weight: 500;
             }
           }
         }
@@ -436,6 +437,7 @@ a {
               height: 50px;
               resize: none;
               border: none;
+              background: transparent;
               border-bottom: 2px solid #ccc;
               &:focus {
                 outline: none;
@@ -453,6 +455,7 @@ a {
             }
             img {
               width: 25px;
+              height: 25px;
             }
             p {
               font-size: 16px;
@@ -467,7 +470,7 @@ a {
 
         .post_list {
           margin-bottom: 10px;
-          background-color: white;
+          background-color: var(--bg-color);
           padding: 10px;
           border-radius: 8px;
           .post_headding {
@@ -510,7 +513,7 @@ a {
       top: 53px;
       align-self: flex-start;
       max-height: 100vh;
-      background-color: white;
+      background-color: var(--bg-color);
       border-radius: 8px;
       padding: 20px 15px;
       .events_container {
@@ -631,7 +634,7 @@ a {
 .hero_profil_detail_container{
   display: flex;
   justify-content: space-between;
-  background-color: white;
+  background-color: var(--bg-color);
   // margin-block: 5px;
   padding: 15px;
   visibility: hidden1;
@@ -642,7 +645,6 @@ a {
   gap: 10px;
     .hero_profil_detail_img{
       // visibility: hidden1;
-      // flex-grow: 1;
       img{
         width: 100px;
       }
@@ -712,7 +714,7 @@ gap: 10px;
    
     .intro_container{
       .into{
-        background-color: white;
+        background-color: var(--bg-color);
         padding: 10px;
         border-radius: 8px;
         .intro_headding{
@@ -738,7 +740,7 @@ gap: 10px;
       }
       .user_photo_container{
         padding: 10px;
-        background-color: white;
+        background-color: var(--bg-color);
         // margin-top: 10px;
         border-radius: 8px;
         .user_photo_heading{

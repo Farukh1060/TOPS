@@ -6,6 +6,10 @@ profile_img.addEventListener("click",function(){
 
 let btnn = document.getElementById("button")
 btnn.addEventListener("click",function(){
+    let body =
     this.classList.toggle("togl")
+    document.body.classList.toggle("dark_them")
     // btn.toggleAttribute("style","right: 2px;")
 })
+
+

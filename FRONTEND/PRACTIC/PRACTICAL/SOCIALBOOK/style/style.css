@@ -2,6 +2,20 @@
   font-family: poppin;
   src: url(font/Poppins-Light.ttf);
 }
+:root {
+  --body-color:#efefef;
+  --nav-color:#1876f2;
+  --bg-color:#fff;
+  --text-color:#1c0c0c;
+}
+
+.dark_them {
+  --body-color:#0a0a0a;
+  --nav-color:#000;
+  --bg-color:#000;
+  --text-color:#fff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +24,7 @@
 }
 
 body {
-  background-color: #ccc;
+  background-color: var(--body-color);
   font-family: poppin;
 }
 
@@ -20,13 +34,13 @@ body {
 }
 
 p {
-  color: rgb(31, 31, 31);
+  color: var(--text-color);
 }
 
 h3 {
   font-family: poppin;
   font-weight: 600;
-  color: rgb(56, 45, 45);
+  color: var(--text-color);
 }
 
 .mb {
@@ -60,7 +74,7 @@ a {
   z-index: 1;
   display: grid;
   place-items: center;
-  background-color: rgb(47, 135, 249);
+  background-color: var(--nav-color);
 }
 .nav_bar_container .nav_bar {
   display: flex;
@@ -141,7 +155,7 @@ a {
   position: absolute;
   top: 126%;
   right: 8px;
-  background-color: white;
+  background-color: var(--bg-color);
   padding: 10px;
   width: 300px;
 }
@@ -152,19 +166,13 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-.nav_bar_container .nav_bar .search_profile .setting_container .setting .setting_profil .setting_profile_img,
-.nav_bar_container .nav_bar .search_profile .setting_container .setting .setting_profil .feedback_profile_img,
-.nav_bar_container .nav_bar .search_profile .setting_container .setting .feedback_profil .setting_profile_img,
-.nav_bar_container .nav_bar .search_profile .setting_container .setting .feedback_profil .feedback_profile_img {
-  border-radius: 50%;
-  overflow: hidden;
-  width: 45px;
-}
 .nav_bar_container .nav_bar .search_profile .setting_container .setting .setting_profil .setting_profile_img img,
 .nav_bar_container .nav_bar .search_profile .setting_container .setting .setting_profil .feedback_profile_img img,
 .nav_bar_container .nav_bar .search_profile .setting_container .setting .feedback_profil .setting_profile_img img,
 .nav_bar_container .nav_bar .search_profile .setting_container .setting .feedback_profil .feedback_profile_img img {
-  width: 100%;
+  display: block;
+  border-radius: 25px;
+  width: 45px;
 }
 .nav_bar_container .nav_bar .search_profile .setting_container .setting .setting_profil .btn,
 .nav_bar_container .nav_bar .search_profile .setting_container .setting .feedback_profil .btn {
@@ -267,7 +275,7 @@ a {
   }
 }
 .background {
-  background-color: #ccc;
+  background-color: var(--bg-color);
 }
 .background .partision1 {
   grid-template-columns: 1fr 2fr 1fr;
@@ -360,7 +368,7 @@ a {
   color: white;
 }
 .background .partision .mid .user_profil {
-  background-color: white;
+  background-color: var(--bg-color);
   padding: 10px;
   border-radius: 8px;
 }
@@ -372,8 +380,9 @@ a {
   width: 45px;
   border-radius: 50%;
 }
-.background .partision .mid .user_profil .user_profile_detail_container .user_profile_detail h2 {
-  font-weight: 400;
+.background .partision .mid .user_profil .user_profile_detail_container .user_profile_detail h3 {
+  font-size: 25px;
+  font-weight: 500;
 }
 .background .partision .mid .user_profil .user_uplode {
   margin-inline: 55px;
@@ -383,6 +392,7 @@ a {
   height: 50px;
   resize: none;
   border: none;
+  background: transparent;
   border-bottom: 2px solid #ccc;
 }
 .background .partision .mid .user_profil .user_uplode .describe textarea:focus {
@@ -399,13 +409,14 @@ a {
 }
 .background .partision .mid .user_profil .user_uplode .user_uplode_things img {
   width: 25px;
+  height: 25px;
 }
 .background .partision .mid .user_profil .user_uplode .user_uplode_things p {
   font-size: 16px;
 }
 .background .partision .mid .post_container .post_list {
   margin-bottom: 10px;
-  background-color: white;
+  background-color: var(--bg-color);
   padding: 10px;
   border-radius: 8px;
 }
@@ -437,7 +448,7 @@ a {
   top: 53px;
   align-self: flex-start;
   max-height: 100vh;
-  background-color: white;
+  background-color: var(--bg-color);
   border-radius: 8px;
   padding: 20px 15px;
 }
@@ -518,7 +529,7 @@ a {
 .hero_profil_detail_container {
   display: flex;
   justify-content: space-between;
-  background-color: white;
+  background-color: var(--bg-color);
   padding: 15px;
   visibility: hidden1;
 }
@@ -574,7 +585,7 @@ a {
   max-width: 340px;
 }
 .profile_intro_feed .intro_photo_friend_container .intro_container .into {
-  background-color: white;
+  background-color: var(--bg-color);
   padding: 10px;
   border-radius: 8px;
 }
@@ -596,7 +607,7 @@ a {
 }
 .profile_intro_feed .intro_photo_friend_container .intro_container .user_photo_container {
   padding: 10px;
-  background-color: white;
+  background-color: var(--bg-color);
   border-radius: 8px;
 }
 .profile_intro_feed .intro_photo_friend_container .intro_container .user_photo_container .user_photo_heading {
