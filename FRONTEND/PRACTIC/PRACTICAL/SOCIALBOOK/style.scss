@@ -1,19 +1,18 @@
-
 @font-face {
   font-family: poppin;
   src: url(font/Poppins-Light.ttf);
 }
-:root{
-  --body-color:#efefef;
-  --nav-color:#1876f2;
-  --bg-color:#fff;
-  --text-color:#1c0c0c;
+:root {
+  --body-color: #efefef;
+  --nav-color: #1876f2;
+  --bg-color: #fff;
+  --text-color: #1c0c0c;
 }
-.dark_them{
-  --body-color:#0a0a0a;
-  --nav-color:#000;
-  --bg-color:#000;
-  --text-color:#fff;
+.dark_them {
+  --body-color: #0a0a0a;
+  --nav-color: #000;
+  --bg-color: #000;
+  --text-color: #fff;
 }
 * {
   margin: 0;
@@ -21,10 +20,9 @@
   box-sizing: border-box;
   text-transform: capitalize;
 }
-body{
+body {
   background-color: var(--body-color);
   font-family: poppin;
- 
 }
 .container {
   width: calc(100vw - 100px);
@@ -34,15 +32,15 @@ body{
 p {
   color: var(--text-color);
 }
-h3{
+h3 {
   font-family: poppin;
   font-weight: 600;
   color: var(--text-color);
 }
-.mb{
- margin-bottom: 10px;
+.mb {
+  margin-bottom: 10px;
 }
-.mb1{
+.mb1 {
   margin-bottom: 8px;
 }
 
@@ -58,7 +56,7 @@ a {
   align-items: center;
   // margin-block: 10px;
 }
-.dblock{
+.dblock {
   display: none;
 }
 // -----------------------------------nav_bar---------------------------
@@ -152,7 +150,7 @@ a {
           }
         }
       }
-// ------------------------------------ drop down------------------------
+      // ------------------------------------ drop down------------------------
       .setting_container {
         position: absolute;
         top: 126%;
@@ -177,23 +175,23 @@ a {
               }
             }
             // -----------------------toggle button-------------------------
-            .btn{
+            .btn {
               position: relative;
-              width: 45px ;
+              width: 45px;
               height: 26px;
               border: 2px solid #ccc;
               padding: 1px 2px;
               border-radius: 15px;
-              .btn_inner{
-              position: absolute;
-              
+              .btn_inner {
+                position: absolute;
+
                 height: 20px;
                 width: 20px;
                 background-color: black;
                 border-radius: 50%;
               }
               // ----------------------toggle class---------------------------
-              .togl{
+              .togl {
                 right: 2px;
                 background-color: #ccc;
               }
@@ -208,20 +206,37 @@ a {
       }
     }
 
-    @media screen and (max-width: 768px) {
-      .container {
-        width: calc(100vw - 50px);
-        margin-inline: auto;
-      }
-      .search_profile {
-        display: none;
-      }
-      .nav_icon {
-        flex-grow: 0;
-      }
-    }
+    // @media screen and(min-width:576px) {
+
+    // }
+    // @media screen and(max-width:768px) {
+
+    // }
+    // @media screen and(max-width:992px) {
+
+    // }
+    // @media screen and(max-width:1200px) {
+
+    // }
+    // @media screen and(max-width:1400px) {
+
+    // }
+
+    // @media screen and (max-width: 768px) {
+    //   .container {
+    //     width: calc(100vw - 50px);
+    //     margin-inline: auto;
+    //   }
+    //   .search_profile {
+    //     display: none;
+    //   }
+    //   .nav_icon {
+    //     flex-grow: 0;
+    //   }
+    // }
   }
 }
+
 
 .sm {
   // visibility: hidden1;
@@ -286,19 +301,19 @@ a {
     }
   }
 }
-@media screen and (max-width: 768px) {
-  .container {
-    width: calc(100vw - 50px);
-    margin-inline: auto;
-  }
-  .sm {
-    display: block;
-  }
-}
+// @media screen and (max-width: 768px) {
+//   .container {
+//     width: calc(100vw - 50px);
+//     margin-inline: auto;
+//   }
+//   .sm {
+//     display: block;
+//   }
+// }
 // ----------------------------main containt division-----------------------
 .background {
   background-color: var(--body-color);
-  .partision1{
+  .partision1 {
     grid-template-columns: 1fr 2fr 1fr;
   }
   .partision {
@@ -343,7 +358,7 @@ a {
         }
       }
     }
-// ----------------------------middle bar----------------------------
+    // ----------------------------middle bar----------------------------
     .mid {
       visibility: hidden1;
       // -----------------------------status-----------------------------
@@ -375,8 +390,9 @@ a {
             border-radius: 10px;
             overflow: hidden;
             img {
+              width: 100%;
               display: block;
-              height: 200px;
+              // height: 200px;
             }
             &::after {
               content: "";
@@ -438,7 +454,7 @@ a {
           .describe {
             // margin-block: 10px;
             // h3 {
-              // font-weight: 400;
+            // font-weight: 400;
             // }
             textarea {
               width: 100%;
@@ -640,140 +656,181 @@ a {
 }
 
 // ------------------------------profile.html--------------------
-.hero_profil{
+.hero_profil {
   visibility: hidden1;
-  img{
+  img {
     width: 100%;
   }
 }
-.hero_profil_detail_container{
+.hero_profil_detail_container {
   display: flex;
   justify-content: space-between;
   background-color: var(--bg-color);
   // margin-block: 5px;
   padding: 15px;
   visibility: hidden1;
-  .cover{
+  .cover {
     // visibility: hidden1;
     display: flex;
-  align-items: center;
-  gap: 10px;
-    .hero_profil_detail_img{
+    align-items: center;
+    gap: 10px;
+    .hero_profil_detail_img {
       // visibility: hidden1;
-      img{
+      img {
         width: 100px;
       }
     }
-    .hero_profil_detail_headding{
+    .hero_profil_detail_headding {
       // visibility: hidden1;
       // flex-grow: 2;
-      .friends_profile_container{
-        img{
+      .friends_profile_container {
+        img {
           width: 45px;
           border-radius: 50%;
         }
       }
-      
     }
   }
 
-  .prfile_btn_container{
+  .prfile_btn_container {
     // visibility: hidden1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    .btn{
+    .btn {
       display: flex;
-    align-items: center;
-    gap: 10px;
-    img{
-      // display: inline;
-      width: 20px;
-      height: 20px;
-      margin-inline: 5px;
-    
-    }
-    .add_friends_container{
-      .add_friends{
-        background-color: #ccc;
-        padding: 10px 15px;
+      align-items: center;
+      gap: 10px;
+      img {
+        // display: inline;
+        width: 20px;
+        height: 20px;
+        margin-inline: 5px;
+      }
+      .add_friends_container {
+        .add_friends {
+          background-color: #ccc;
+          padding: 10px 15px;
+        }
+      }
+      .msg_friends_container {
+        .msg_friends {
+          background-color: blue;
+          padding: 10px 15px;
+          color: white;
+        }
       }
     }
-    .msg_friends_container{
-
-      .msg_friends{
-        background-color: blue;
-        padding: 10px 15px;
-        color: white;
-      }
-    }
-    }
-    .icon{
+    .icon {
       align-self: flex-end;
       background-color: #ccc;
       border-radius: 10px;
       padding: 5px 10px;
     }
-    
   }
 }
-.profile_intro_feed{
- display: flex;
-gap: 10px;
- 
-  .intro_photo_friend_container{
+.profile_intro_feed {
+  display: flex;
+  gap: 10px;
+
+  .intro_photo_friend_container {
     // margin-block: 10px;
 
     align-self: flex-start;
     max-width: 340px;
-   
-    .intro_container{
-      .into{
+
+    .intro_container {
+      .into {
         background-color: var(--bg-color);
         padding: 10px;
         border-radius: 8px;
-        .intro_headding{
-          border-bottom: 1px solid #ccc;
+        .intro_headding {
+          border-bottom: 1px solid #bd6d6d;
           padding-bottom: 20px;
-          p{
+          p {
             padding-block: 5px;
             text-align: center;
           }
         }
-        .into_detail_container{
-          .i_d_c{
+        .into_detail_container {
+          .i_d_c {
             display: flex;
             align-items: center;
             gap: 10px;
             // margin-block: 6px;
-            img{
+            img {
               width: 35px;
             }
-          
           }
         }
       }
-      .user_photo_container{
+      .user_photo_container {
         padding: 10px;
         background-color: var(--bg-color);
         // margin-top: 10px;
         border-radius: 8px;
-        .user_photo_heading{
+        .user_photo_heading {
           display: flex;
-          justify-content:space-between ;
+          justify-content: space-between;
         }
-        .user_photo{
+        .user_photo {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
           gap: 10px;
-          img{
+          img {
             width: 100%;
           }
         }
       }
     }
   }
-  .background{
+  .background {
     flex-basis: 100%;
+  }
+}
+
+
+
+@media screen and (max-width: 992px) {
+  .container {
+    width: calc(100vw - 50px);
+    margin-inline: auto;
+  }
+  .left {
+    display: none;
+  }
+  .right {
+    display: none;
+  }
+
+  .nav_bar_container .nav_bar .logo img {
+    max-width: 110px;
+  }
+ 
+  .nav_bar_container .nav_bar .nav_icon img {
+    width: 20px;
+  }
+  .nav_bar_container .nav_bar .search_profile .search_bar{
+    display: none;
+  }
+  .nav_bar_container .nav_bar .search_profile .profile_container .profile_img img {
+    max-width: 30px;
+  }
+  .background .partision {
+    display:block;
+  }
+  .background .partision .mid .user_profil .user_uplode .user_uplode_things {
+   flex-wrap: wrap;
+  }
+  .background .partision .mid .status_bar_container .status_add .status_content .add_icon img {
+    width: 20px;
+  }
+  .background .partision .mid .status_bar_container .add_post_posi {
+    
+    left: 10px;
+   
+  }
+  .background .partision .mid .status_bar_container .status_add .status_content .add_content p {
+    font-size: 12px;
   }
 }
