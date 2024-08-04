@@ -1,8 +1,30 @@
+
+@font-face {
+  font-family: poppin;
+  src: url(font/Poppins-Light.ttf);
+}
+:root{
+  --body-color:#efefef;
+  --nav-color:#1876f2;
+  --bg-color:#fff;
+  --text-color:#1c0c0c;
+}
+.dark_them{
+  --body-color:#0a0a0a;
+  --nav-color:#000;
+  --bg-color:#000;
+  --text-color:#fff;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-transform: capitalize;
+}
+body{
+  background-color: var(--body-color);
+  font-family: poppin;
+ 
 }
 .container {
   width: calc(100vw - 100px);
@@ -10,10 +32,18 @@
 }
 
 p {
-  // text-transform: capitalize;
-  color: rgb(31, 31, 31);
-  font-size: 20px;
-  font-weight: 500;
+  color: var(--text-color);
+}
+h3{
+  font-family: poppin;
+  font-weight: 600;
+  color: var(--text-color);
+}
+.mb{
+ margin-bottom: 10px;
+}
+.mb1{
+  margin-bottom: 8px;
 }
 
 a {
@@ -26,7 +56,7 @@ a {
   display: flex;
   gap: 15px;
   align-items: center;
-  margin-block: 10px;
+  // margin-block: 10px;
 }
 .dblock{
   display: none;
@@ -36,19 +66,16 @@ a {
   position: sticky;
   top: 0px;
   z-index: 1;
-  // visibility: hidden;
+  // visibility: hidden1;
   display: grid;
   place-items: center;
-  background-color: rgb(47, 135, 249);
-  // background-color: rgb(11, 78, 78);
-  // border: 1px solid red;
+  background-color: var(--nav-color);
   .nav_bar {
-    // border: 1px solid red;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 30px;
-    padding-block: 5px;
+    // padding-block: 5px;
 
     .logo {
       flex-grow: 1;
@@ -128,10 +155,9 @@ a {
         position: absolute;
         top: 126%;
         right: 8px;
-        background-color: white;
+        background-color: var(--bg-color);
         padding: 10px;
         width: 300px;
-        // height: 200px;
         .setting {
           // border: 1px solid red;
           .setting_profil,
@@ -142,12 +168,10 @@ a {
             align-items: center;
             .setting_profile_img,
             .feedback_profile_img {
-              border-radius: 50%;
-              overflow: hidden;
-              width: 45px;
-              margin-block: 10px;
               img {
-                width: 100%;
+                display: block;
+                border-radius: 25px;
+                width: 45px;
               }
             }
             .btn{
@@ -196,8 +220,8 @@ a {
 }
 
 .sm {
-  // visibility: hidden;
-  margin-top: 2px;
+  // visibility: hidden1;
+  // margin-top: 2px;
 
   display: none;
   // border: 1px solid red;
@@ -269,21 +293,19 @@ a {
 }
 
 .background {
-  background-color: #ccc;
-
+  background-color: var(--bg-color);
+  .partision1{
+    grid-template-columns: 1fr 2fr 1fr;
+  }
   .partision {
     display: grid;
-    padding-top: 8px;
-    // min-height: 100vh;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 2px;
+    gap: 10px;
     .left {
-      // visibility: hidden;
-      // border: 1px solid red;
+      // visibility: hidden1;
       position: sticky;
-      top: 70px;
+      top: 53px;
       align-self: flex-start;
-      max-height: 90vh;
+      max-height: 100vh;
       .rowflx {
         display: flex;
         align-items: center;
@@ -295,7 +317,7 @@ a {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
         padding-bottom: 10px;
       }
 
@@ -317,12 +339,9 @@ a {
     }
 
     .mid {
-      padding: 10px;
-      // border: 1px solid red;
-      // visibility: hidden;
+      visibility: hidden1;
       .status_bar_container {
-        // visibility: hidden;
-        // border: 1px solid red;
+        // visibility: hidden1;
         display: flex;
         justify-content: space-between;
         gap: 10px;
@@ -385,9 +404,9 @@ a {
         }
       }
       .user_profil {
-        background-color: white;
+        background-color: var(--bg-color);
         padding: 10px;
-        margin-top: 10px;
+        // margin-top: 10px;
         border-radius: 8px;
         .user_profile_detail_container {
           display: flex;
@@ -399,8 +418,9 @@ a {
             }
           }
           .user_profile_detail {
-            h2 {
-              font-weight: 400;
+            h3 {
+              font-size: 25px;
+              font-weight: 500;
             }
           }
         }
@@ -408,15 +428,16 @@ a {
         .user_uplode {
           margin-inline: 55px;
           .describe {
-            margin-block: 10px;
-            h3 {
-              font-weight: 400;
-            }
+            // margin-block: 10px;
+            // h3 {
+              // font-weight: 400;
+            // }
             textarea {
               width: 100%;
               height: 50px;
               resize: none;
               border: none;
+              background: transparent;
               border-bottom: 2px solid #ccc;
               &:focus {
                 outline: none;
@@ -434,6 +455,7 @@ a {
             }
             img {
               width: 25px;
+              height: 25px;
             }
             p {
               font-size: 16px;
@@ -447,12 +469,12 @@ a {
         //
 
         .post_list {
-          margin-block: 10px;
-          background-color: white;
+          margin-bottom: 10px;
+          background-color: var(--bg-color);
           padding: 10px;
           border-radius: 8px;
           .post_headding {
-            margin-block: 10px;
+            // margin-block: 10px;
             display: flex;
             gap: 10px;
             justify-content: space-between;
@@ -477,7 +499,7 @@ a {
               display: flex;
               gap: 25px;
               align-items: center;
-              margin: 15px;
+              // margin: 15px;
               img {
                 width: 25px;
               }
@@ -488,13 +510,12 @@ a {
     }
     .right {
       position: sticky;
-      top: 70px;
+      top: 53px;
       align-self: flex-start;
-      // max-height: 90vh;
-      // border: 1px solid red;
-      background-color: white;
+      max-height: 100vh;
+      background-color: var(--bg-color);
       border-radius: 8px;
-      padding: 25px 15px;
+      padding: 20px 15px;
       .events_container {
         .event_headding_container {
           display: flex;
@@ -509,7 +530,7 @@ a {
 
         .event_list_container {
           .events {
-            margin-top: 10px;
+            // margin-top: 10px;
             display: flex;
             gap: 20px;
             .event_date {
@@ -521,10 +542,10 @@ a {
               border-radius: 8px;
               .date {
                 text-align: center;
-                padding: 8px 10px;
+                padding: 5px 10px;
               }
               .month {
-                padding: 8px 12px;
+                padding: 5px 10px;
                 background-color: rgb(47, 135, 249);
                 color: white;
               }
@@ -548,7 +569,7 @@ a {
         .advertisement_headding_container {
           display: flex;
           justify-content: space-between;
-          margin-block: 10px;
+          // margin-block: 10px;
         }
         .add_img {
           img {
@@ -566,7 +587,7 @@ a {
             // position: relative;
             display: flex;
             gap: 15px;
-            margin-top: 10px;
+            // margin-top: 10px;
             align-items: center;
             .online_mem_img {
               position: relative;
@@ -605,6 +626,7 @@ a {
 
 // ------------------------------profile.html--------------------
 .hero_profil{
+  visibility: hidden1;
   img{
     width: 100%;
   }
@@ -612,17 +634,23 @@ a {
 .hero_profil_detail_container{
   display: flex;
   justify-content: space-between;
+  background-color: var(--bg-color);
+  // margin-block: 5px;
+  padding: 15px;
+  visibility: hidden1;
   .cover{
+    // visibility: hidden1;
     display: flex;
   align-items: center;
   gap: 10px;
     .hero_profil_detail_img{
-      // flex-grow: 1;
+      // visibility: hidden1;
       img{
         width: 100px;
       }
     }
     .hero_profil_detail_headding{
+      // visibility: hidden1;
       // flex-grow: 2;
       .friends_profile_container{
         img{
@@ -635,12 +663,20 @@ a {
   }
 
   .prfile_btn_container{
-    // flex-grow: 1;
+    // visibility: hidden1;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .btn{
+      display: flex;
     align-items: center;
+    gap: 10px;
     img{
-      display: inline-block;
+      // display: inline;
       width: 20px;
+      height: 20px;
+      margin-inline: 5px;
+    
     }
     .add_friends_container{
       .add_friends{
@@ -649,10 +685,80 @@ a {
       }
     }
     .msg_friends_container{
+
       .msg_friends{
         background-color: blue;
         padding: 10px 15px;
+        color: white;
       }
     }
+    }
+    .icon{
+      align-self: flex-end;
+      background-color: #ccc;
+      border-radius: 10px;
+      padding: 5px 10px;
+    }
+    
+  }
+}
+.profile_intro_feed{
+ display: flex;
+gap: 10px;
+ 
+  .intro_photo_friend_container{
+    // margin-block: 10px;
+
+    align-self: flex-start;
+    max-width: 340px;
+   
+    .intro_container{
+      .into{
+        background-color: var(--bg-color);
+        padding: 10px;
+        border-radius: 8px;
+        .intro_headding{
+          border-bottom: 1px solid #ccc;
+          padding-bottom: 20px;
+          p{
+            padding-block: 5px;
+            text-align: center;
+          }
+        }
+        .into_detail_container{
+          .i_d_c{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            // margin-block: 6px;
+            img{
+              width: 35px;
+            }
+          
+          }
+        }
+      }
+      .user_photo_container{
+        padding: 10px;
+        background-color: var(--bg-color);
+        // margin-top: 10px;
+        border-radius: 8px;
+        .user_photo_heading{
+          display: flex;
+          justify-content:space-between ;
+        }
+        .user_photo{
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 10px;
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .background{
+    flex-basis: 100%;
   }
 }
