@@ -1,3 +1,11 @@
+@font-face {
+  font-family: poppin_lg;
+  src: url(font/Poppins-Light.ttf);
+}
+@font-face {
+  font-family: poppin_bt;
+  src: url(font/Poppins-Bold.ttf);
+}
 body {
   text-transform: capitalize;
 }
@@ -92,6 +100,6 @@ h2 {
   z-index: -1;
 }
 
-.hotal_list_container {
+.hotal_list_container, .hotal_detail_img {
   margin-top: 75px;
 }

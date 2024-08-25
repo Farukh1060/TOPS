@@ -1,12 +1,12 @@
-// @font-face {
-//     font-family: poppin_lg;
-//     src: url(font/Poppins-Light.ttf);
+@font-face {
+    font-family: poppin_lg;
+    src: url(font/Poppins-Light.ttf);
     
-// }
-// @font-face {
-//     font-family: poppin_bt;
-//     src: url(font/Poppins-Bold.ttf);
-// }
+}
+@font-face {
+    font-family: poppin_bt;
+    src: url(font/Poppins-Bold.ttf);
+}
 
 body {
   text-transform: capitalize;
@@ -16,6 +16,7 @@ h1{
   
 }
 p{
+  // margin: 0px;
     font-family: poppin_lg;
     // font-size: 32px;
 }
@@ -120,10 +121,10 @@ backdrop-filter: blur(8px);
 }
 
 // .exclusive_container,
-// .tranding_container {
-//   // visibility: hidden;
+// .tranding_container , .hotal_list_container,.navbar {
+//   visibility: hidden;
 // }
 // ----------------------------hotal.html------------------------
-.hotal_list_container{
+.hotal_list_container, .hotal_detail_img{
   margin-top: 75px;
 }
