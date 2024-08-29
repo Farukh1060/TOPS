@@ -243,13 +243,13 @@ document.cookie = "item = bread,egge";
 localStorage.setItem('name','farukh');
 localStorage.setItem('loc','delhi');
 let x =localStorage.getItem('loc')
-console.log(x)
+// console.log(x)
 localStorage.removeItem('loc')
 
 // sessionStorage
 sessionStorage.setItem('name','farukh');
 let y =localStorage.getItem('name')
-console.log(y)
+// console.log(y)
 sessionStorage.removeItem('name')
 
 // ----------------------------------------JSON javscript Object notation---------------
@@ -261,3 +261,98 @@ sessionStorage.removeItem('name')
 //     "lang":["c","c++","python"]
 // }
 // dont use single quote and dont use comma at last data
+
+// ----------------------------JSON.parse------------------------
+
+// whem we get data from api which is in json string formate
+//  get data from json string
+// assume we get data from server and store in varaible (this is json string)
+let data = `{
+    "name":"farukh",
+    "age":25,
+    "is_student":true,
+    "passport_no":null,
+    "lang":["c","c++","java"],
+    "address":{
+        "city":"surat",
+        "state":"guj",
+        "pincode":"394201"
+    }
+}`
+// first convert it into javascript object
+// access value 
+let dobject =  JSON.parse(data);
+// console.log(dobject["age"])
+// console.log(dobject["lang"][1])
+// console.log(dobject["address"])
+// console.log(dobject["address"]["pincode"])
+
+// ------------------------JSON.stringify--------------------------
+// we have normal js object we want to sent to server
+// so first convert into json string
+let student = {
+    nam:"farukh",
+    age:25,
+    pincode:"394210"
+}
+let data_string = JSON.stringify(student);
+// console.log(data_string)
+
+// ------------------------------oop--------------------------
+// 1 object   2 class    3 inheritance
+
+// in oops we group function and variable in block called class
+
+// four piller of oops
+
+// encapsulation : mean wraping up data 
+// and member function together into single unit
+
+// abstraction: is the process of showing only essential /nessary features
+// of an entity /object to the outside world and hide the other irrelevant information
+
+// inheritance: alowa a class to acquire the properties and behaviour of 
+// another class 
+
+// polymorphism :means many forms
+
+let person1 = {
+    firstname : "shaikh",
+    "last name": "farukh",
+    
+    fulname : function(){
+      console.log(this.firstname + " "+ this["last name"])
+    }
+}
+person1.age = 25;
+person1.sayhi = function(){
+    console.log("say hi")
+}
+
+// console.log(person1.firstname)
+// console.log(person1.age)
+// console.log(person1["last name"])
+// person1.fulname()
+// person1.sayhi()
+
+// now if we want to make person2 object we want to reapeat all step again
+// this will break DRY RULL so for not reapeating or coping whole thing agan
+// use construction function (es5) or class (es6)
+// constructor function is a blue print form makig many object
+
+// constructor
+
+function Person(f_n,l_n,a){
+    this.firstname = f_n;
+    this.lastname = l_n;
+    this.age = a;
+    this.changeage = function(newage){
+        this.age = newage;
+    }
+}
+
+let customer1 = new Person("SHAIK","FARUKH",25)
+console.log(customer1)
+let customer2 = new Person("SHAIK","FARUKH",25)
+customer2.changeage(27);
+console.log(customer2)
