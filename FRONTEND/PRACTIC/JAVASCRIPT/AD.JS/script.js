@@ -342,17 +342,58 @@ person1.sayhi = function(){
 
 // constructor
 
+function Creature(ls){
+this.life_span = ls
+}
+Creature.prototype.breath = function(){
+    console.log("breathing")
+}
+
+let creature1 = new Creature(100)
+console.log(creature1 )
+
 function Person(f_n,l_n,a){
     this.firstname = f_n;
     this.lastname = l_n;
     this.age = a;
-    this.changeage = function(newage){
-        this.age = newage;
-    }
+    // this.changeage = function(newage){
+    //     this.age = newage;
+    // }
 }
+
+Person.prototype.changeage  = function(newage){
+    this.age = newage;
+}
+
+
+// to replace prototypr of person with creature
+// Person.prototype = Object.create(Creature.prototype)
+Person.prototype__proto__ = Object.create(Creature.prototype)
 
 let customer1 = new Person("SHAIK","FARUKH",25)
 console.log(customer1)
 let customer2 = new Person("SHAIK","FARUKH",25)
-customer2.changeage(27);
+// customer2.changeage(27);
 console.log(customer2)
+
+
+
+//prototype
+// when we make constructure function prototype of that constructure is made
+// and when we make object it connect with protype
+// so what is in constructure ,is copy in every object hear property is copy
+// in object which is good but methode is same for every object so it shoud be connet with 
+// object with prototype so it will not reapet in code
+
+// Person.prototype.changeage  = function(newage){
+//         this.age = newage;
+// }
+
+
+console.log(customer2.breath())
+
+
+// to replace prototypr of person with creature
+// Person.prototype = Object.create(Creature.prototype)
+
+// to join the prototype of two objects
