@@ -1,0 +1,11 @@
+
+npn creat vite@latest
+npn instal
+npn run dev
+
+react dev tools
+
+
+
+react fragement is use to wrap data insted of div
+

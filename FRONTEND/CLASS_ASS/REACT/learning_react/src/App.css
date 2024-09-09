@@ -1,0 +1,19 @@
+#root {
+  max-width: 400px;
+  min-height: 450px;
+  margin: 0 auto;
+  padding: 2rem;
+  /* text-align: center; */
+  /* border: 1px solid red; */
+  box-shadow: 2px 3px 8px rgb(85, 85, 150);
+}
+h1{
+  text-align: center;
+}
+.inp{
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+
