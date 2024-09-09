@@ -1,0 +1,11 @@
+button{
+    min-width: 100px;
+    font-size: medium;
+    background-color: cadetblue;
+    color: wheat;
+    border: none;
+    border-radius: 8px;
+}
+button:hover{
+    color: white;
+}
