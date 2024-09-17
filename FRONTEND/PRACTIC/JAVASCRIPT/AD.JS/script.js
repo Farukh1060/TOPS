@@ -350,7 +350,7 @@ Creature.prototype.breath = function(){
 }
 
 let creature1 = new Creature(100)
-console.log(creature1 )
+// console.log(creature1 )
 
 function Person(f_n,l_n,a){
     this.firstname = f_n;
@@ -368,13 +368,13 @@ Person.prototype.changeage  = function(newage){
 
 // to replace prototypr of person with creature
 // Person.prototype = Object.create(Creature.prototype)
-Person.prototype__proto__ = Object.create(Creature.prototype)
+Person.prototype.__proto__ = Object.create(Creature.prototype)
 
-let customer1 = new Person("SHAIK","FARUKH",25)
-console.log(customer1)
-let customer2 = new Person("SHAIK","FARUKH",25)
+// let customer1 = new Person("SHAIK","FARUKH",25)
+// console.log(customer1)
+// let customer2 = new Person("SHAIK","FARUKH",25)
 // customer2.changeage(27);
-console.log(customer2)
+// console.log(customer2)
 
 
 
@@ -390,10 +390,95 @@ console.log(customer2)
 // }
 
 
-console.log(customer2.breath())
+// console.log(customer2.breath())
 
 
 // to replace prototypr of person with creature
 // Person.prototype = Object.create(Creature.prototype)
 
 // to join the prototype of two objects
+
+
+// class
+
+class human{
+    constructor(n ,a){
+        this.name = n;
+        this.age = a;
+    }
+    sayhi(){
+        console.log("hi")
+    }
+}
+let person3 = new human("farukh",25);
+// person3.sayhi()
+// console.log(person3)
+
+// class and object ES6
+
+class vehical {
+    constructor(n,m){
+        this.name = n;
+        this.model = m;
+        
+        // constructor automaticly call when ever the object ceated
+    }
+
+    brand(){
+        console.log("brandss")
+    }
+
+    static topspeed(){
+        console.log("100m/s")
+    }
+    //static method only call with class name not with object name
+}
+let car1 = new vehical("bmw",230); //object created
+// console.log(car1)
+// car1.brand()
+// vehical.topspeed()
+
+// inherint
+
+// class1
+class emp {
+    constructor(n){
+        this.name =n;
+        // console.log("emp conster coll")
+    }
+    msg(){
+        console.log(" parent or emp ,hi")
+    }
+}
+
+// class2 ,class2 inherite class1
+// so all class1 method and property will access from class2
+
+class mng extends emp{
+    constructor(nam ,d){
+        super(nam)  //super is use to call parent constructer function in child
+        this.depertment=d;
+    }
+    msg(){
+        console.log("emp hii")
+    }
+
+    info(){
+        //if we have same method in both class use 
+        //super to call parent method and use "this" to call child method
+        super.msg()
+        // this.msg()
+        console.log(this.name + " is mng of dept of " +this.depertment)
+    }
+
+}
+let mng1 = new mng("farukhs","web developement");
+// mng1.info()
+// admin will have both mng and emp
+class admine extends mng {
+
+}
+let admine1 = new admine("far","web");
+// console.log(admine1)
+
+// ----------------------------- public privet---------------------------
