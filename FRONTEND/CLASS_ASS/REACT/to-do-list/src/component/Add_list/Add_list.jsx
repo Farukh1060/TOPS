@@ -1,12 +1,11 @@
 import Add_list_item from "../Add_list_item/Add_list_item"
 
 
-const Add_list = ()=>{
-    let iname = "new name";
-let idate = "new date";
+const Add_list = ({list_data,removehandler})=>{
+
     return<>
-        <Add_list_item name = {iname} date = {idate}></Add_list_item>
-        <Add_list_item name = {iname} date = {idate}></Add_list_item>
+    {list_data.map(ele =>(<Add_list_item key={ele.fullname} ele={ele} removehandler={removehandler}></Add_list_item>))}
+        
     </>
 }
 export default Add_list

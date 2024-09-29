@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Item from "../Item/Item";
 
-const Food_item = ({ food_list }) => {
+const Food_item = ({ food_list,deletebtnhandler }) => {
   let [activelist, setactivelist] = useState([]);
 
 
@@ -22,6 +22,7 @@ const Food_item = ({ food_list }) => {
           activelist={activelist}
           byebtnhandler={byebtnhandler}
           removebtnhandler={removebtnhandler}
+          deletbtnhandler={deletebtnhandler}
         ></Item>
       </ul>
     </>

@@ -4,12 +4,14 @@ import "./App.css"
 import Input from "./component/Input/Input";
 import Food_item from "./component/Food_item/Food_item";
 import styles from "./App.module.css"
+import Showmsg from './component/Showmsg/Showmsg';
 
 
-let food_lists = ["apple","mango","pineapple"]
+let food_lists = []
 const App = () =>{
 
    let [food_list,setfood_list]=useState(food_lists)
+  
   const Inputvaluehandler = (e) =>{
     
     if(e.key ==="Enter"){
@@ -26,17 +28,21 @@ const App = () =>{
 
     }    
  }
+ const deletebtnhandler = (fname)=>{
+  const updatelist = food_list.filter(ele =>(ele!=fname))
+  setfood_list(updatelist)
+ }
 
- 
 
-  return(
+
+  return(<>
     <div className = {styles.container}>
       <Title></Title>
       <Input Inputvaluehandler={Inputvaluehandler}></Input>
-      
-      <Food_item food_list={food_list} ></Food_item>
-    
+      <Food_item food_list={food_list} deletebtnhandler ={deletebtnhandler} ></Food_item>
     </div>
+      <Showmsg food_list={food_list} Inputvaluehandler={Inputvaluehandler}></Showmsg>
+    </>
   );
  }
 

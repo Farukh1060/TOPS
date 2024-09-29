@@ -1,23 +1,22 @@
-import react ,{ useState } from 'react'
-import "./Add_list_item.css"
+import react, { useState } from "react";
+import "./Add_list_item.css";
+
+const Add_list_item = ({ ele, removehandler }) => {
 
 
-
- const Add_list_item = (probes) =>{
-
-     
-    const [name,setname] = useState(probes.name)
-    const [date,setdate] = useState(probes.date)
-    let click_handeler = ()=>{
-       setname(name)
-       setdate(date)
-    }
-    
-
-    return <center className="list_item">
-        <div><span>{name}</span></div>
-        <div><span>{date}</span></div>
-        <button onClick={click_handeler}>remove</button>
+  return (
+    <center className="list_item">
+      <div>
+        <span>{ele.fullname}</span>
+      </div>
+      <div>
+        <span>
+          {ele.date.getDate()}\{ele.date.getMonth() + 1}\
+          {ele.date.getFullYear()}
+        </span>
+      </div>
+      <button onClick={()=>{removehandler(ele.fullname)}}>remove</button>
     </center>
- }
- export default Add_list_item
+  );
+};
+export default Add_list_item;
