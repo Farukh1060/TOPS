@@ -1,5 +1,4 @@
 
-
 const Banner_slider =() =>{
     return(
         <div className="container">
