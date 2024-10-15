@@ -2,8 +2,8 @@ import react, { useState } from "react";
 import "./App.css";
 import Title from "./component/Title/Title";
 import Add_task from "./component/Add_task/Add_task";
-import Add_list_item from "./component/Add_list_item/Add_list_item";
 import Add_list from "./component/Add_list/Add_list";
+import { todoitem_context } from "./Store/todoitem_store";
 
 function App() {
   const list_datas = [
@@ -19,6 +19,7 @@ function App() {
   // console.log(list_datas)
 
   const [list_data, setlistdata] = useState(list_datas);
+
   const onaddclick = (newlist_data) => {
     const newlist = [...list_data, newlist_data];
     setlistdata(newlist);
@@ -30,11 +31,14 @@ function App() {
   };
 
   return (
-    <>
+    <todoitem_context.Provider value={{list_data,onaddclick,removehandler}}>
+  
       <Title></Title>
-      <Add_task onaddclick={onaddclick}></Add_task>
-      <Add_list list_data={list_data} removehandler={removehandler}></Add_list>
-    </>
+      <Add_task ></Add_task>
+      <Add_list ></Add_list>
+    
+
+      </todoitem_context.Provider>
   );
 }
 

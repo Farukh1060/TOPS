@@ -1,8 +1,12 @@
 // import { useState } from "react"
+import { todoitem_context } from "../../Store/todoitem_store";
 import "./Add_task.css";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
-let Add_task = ({ onaddclick }) => {
+let Add_task = () => {
+
+  const {onaddclick}=useContext(todoitem_context)
+
   let [task, settask] = useState("");
   let [taskdate, settaskdate] = useState("");
 
