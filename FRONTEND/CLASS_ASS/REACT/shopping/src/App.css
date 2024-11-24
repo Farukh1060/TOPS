@@ -10,4 +10,12 @@
   padding: 2rem; */
 }
 
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #605b5b;
+}
+
 
