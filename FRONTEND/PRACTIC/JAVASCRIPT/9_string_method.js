@@ -45,7 +45,7 @@ console.log(name1);
 // it end is not given show whole string from given starting position
 // document.getElementById("para").innerHTML = name1.slice(5,11)  ;
 // document.getElementById("para").innerHTML = name1.slice(5)  ;
-// document.getElementById("para").innerHTML = name1.slice(-11,-6)  ;
+document.getElementById("para").innerHTML = name1.slice(-11,-6)  ;
 
 
 //substring same as slice

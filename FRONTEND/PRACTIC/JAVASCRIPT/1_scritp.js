@@ -35,7 +35,6 @@ console.log(x+y);
 // x+=6;
 // x**=y
 // x++;
-=======
 // alert("hellow world");
 // document.getElementById("js").innerHTML="master";
 // document.write("master cam");
