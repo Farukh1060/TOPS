@@ -1,10 +1,32 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
+import { Productcontax } from '../Store/App_store'
 
 const ShopeDetail = () => {
 
- 
+const {productlist} = useContext(Productcontax)
   
+  const location = useLocation()
+
+  const id = (location.state)
+// console.log(id);
+
+  const[result ,setresult] = useState({reviews:[]})
+  // console.log( "result" + result.reviews.length)
+
+  useEffect(()=>{
+    fetch(`https://dummyjson.com/products/${id}`).then(response=>{
+        return response.json()}
+    ).then(data=>{
+      setresult(data)
+      console.log(data)
+      // return data
+    })
+  },[])
+ 
+  // console.log(result.reviews)
   return (
+    
     <div className="container-fluid py-5">
       <div className="row px-xl-5">
         <div className="col-lg-5 pb-5">
@@ -17,31 +39,12 @@ const ShopeDetail = () => {
               <div className="carousel-item active">
                 <img
                   className="w-100 h-100"
-                  src="img/product-1.jpg"
+                  src={result.images
+                  }
                   alt="Image"
                 />
               </div>
-              <div className="carousel-item">
-                <img
-                  className="w-100 h-100"
-                  src="img/product-2.jpg"
-                  alt="Image"
-                />
-              </div>
-              <div className="carousel-item">
-                <img
-                  className="w-100 h-100"
-                  src="img/product-3.jpg"
-                  alt="Image"
-                />
-              </div>
-              <div className="carousel-item">
-                <img
-                  className="w-100 h-100"
-                  src="img/product-4.jpg"
-                  alt="Image"
-                />
-              </div>
+              
             </div>
             <a
               className="carousel-control-prev"
@@ -60,26 +63,25 @@ const ShopeDetail = () => {
           </div>
         </div>
 
+{/* product */}
         <div className="col-lg-7 pb-5">
-          <h3 className="font-weight-semi-bold">Colorful Stylish Shirt</h3>
+          <h3 className="font-weight-semi-bold">{result.title}</h3>
           <div className="d-flex mb-3">
             <div className="text-primary mr-2">
-              <small className="fas fa-star"></small>
-              <small className="fas fa-star"></small>
-              <small className="fas fa-star"></small>
-              <small className="fas fa-star-half-alt"></small>
-              <small className="far fa-star"></small>
+              <small className="fa fa-star"></small>
+              <small className="fa fa-star"></small>
+              <small className="fa fa-star"></small>
+              <small className="fa fa-star-half-alt"></small>
+              <small className="fa fa-star"></small>
             </div>
-            <small className="pt-1">( 50 Reviews)</small>
+            <small className="pt-1">{result.reviews.length} Reviews</small>
           </div>
-          <h3 className="font-weight-semi-bold mb-4">$150.00</h3>
+          <h3 className="font-weight-semi-bold mb-4">${result.price}</h3>
           <p className="mb-4">
-            Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat
-            diam stet sit clita ea. Sanc invidunt ipsum et, labore clita lorem
-            magna lorem ut. Erat lorem duo dolor no sea nonumy. Accus labore
-            stet, est lorem sit diam sea et justo, amet at lorem et eirmod ipsum
-            diam et rebum kasd rebum.
+            {result.description}
           </p>
+
+
           <div className="d-flex mb-3">
             <p className="text-dark font-weight-medium mb-0 mr-3">Sizes:</p>
             <form>
@@ -266,24 +268,13 @@ const ShopeDetail = () => {
               data-toggle="tab"
               href="#tab-pane-3"
             >
-              Reviews (0)
+              Reviews ({result.reviews.length})
             </a>
           </div>
           <div className="tab-content">
             <div className="tab-pane fade show active" id="tab-pane-1">
               <h4 className="mb-3">Product Description</h4>
-              <p>
-                Eos no lorem eirmod diam diam, eos elitr et gubergren diam sea.
-                Consetetur vero aliquyam invidunt duo dolores et duo sit. Vero
-                diam ea vero et dolore rebum, dolor rebum eirmod consetetur
-                invidunt sed sed et, lorem duo et eos elitr, sadipscing kasd
-                ipsum rebum diam. Dolore diam stet rebum sed tempor kasd eirmod.
-                Takimata kasd ipsum accusam sadipscing, eos dolores sit no ut
-                diam consetetur duo justo est, sit sanctus diam tempor aliquyam
-                eirmod nonumy rebum dolor accusam, ipsum kasd eos consetetur at
-                sit rebum, diam kasd invidunt tempor lorem, ipsum lorem elitr
-                sanctus eirmod takimata dolor ea invidunt.
-              </p>
+             {result.description}
               <p>
                 Dolore magna est eirmod sanctus dolor, amet diam et eirmod et
                 ipsum. Amet dolore tempor consetetur sed lorem dolor sit lorem
@@ -346,11 +337,10 @@ const ShopeDetail = () => {
                 </div>
               </div>
             </div>
-            <div className="tab-pane fade" id="tab-pane-3">
-              <div className="row">
+            <div className="tab-pane fade" id="tab-pane-3">              <div className="row">
                 <div className="col-md-6">
                   <h4 className="mb-4">
-                    1 review for "Colorful Stylish Shirt"
+                    {result.reviews.length} review for "{result.title}"
                   </h4>
                   <div className="media mb-4">
                     <img
@@ -368,11 +358,11 @@ const ShopeDetail = () => {
                         </small>
                       </h6>
                       <div className="text-primary mb-2">
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star-half"></i>
-                        <i className="far fa-star"></i>
+                        <i className="fa fa-star"></i>
+                        <i className="fa fa-star"></i>
+                        <i className="fa fa-star"></i>
+                        <i className="fa fa-star-half"></i>
+                        <i className="fa fa-star"></i>
                       </div>
                       <p>
                         Diam amet duo labore stet elitr ea clita ipsum, tempor

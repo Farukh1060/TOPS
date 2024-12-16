@@ -9,7 +9,7 @@ const Navbar = ()=>{
 
     return(
 
-        <div className="container-fluid mb-5">
+        <div className="container-fluid mb-5 ">
         <div className="row border-top px-xl-5">
             <div className="col-lg-3 d-none d-lg-block">
                 <a className="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100" data-toggle="collapse" href="#navbar-vertical" style={{height:"65px", marginTop : "-1px", padding:"0 30px"}}>
@@ -58,7 +58,7 @@ const Navbar = ()=>{
                         </div>
                     </div>
                 </nav>
-                <div id="header-carousel" className="carousel slide" data-ride="carousel">
+                <div id="header-carousel" className="carousel slide" data-ride="carousel" >
                     <div className="carousel-inner">
                         <div className="carousel-item active" style={{height: "410px"}}>
                             <img className="img-fluid" src={img1} alt="Image"/>

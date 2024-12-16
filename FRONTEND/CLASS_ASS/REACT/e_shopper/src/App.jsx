@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 import Topbar from "./Component/Topbar";
 import Navbar from "./Component/Navbar";
@@ -9,7 +9,7 @@ import Productcontexprovider from "./Store/App_store";
 const App = () => {
 
 
-  
+ 
   return (
     <Productcontexprovider>
 

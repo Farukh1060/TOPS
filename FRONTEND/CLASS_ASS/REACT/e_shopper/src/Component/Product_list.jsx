@@ -22,8 +22,7 @@ const Product_list = ({ ele }) => {
                 </div>
               </div>
               <div className="card-footer d-flex justify-content-between bg-light border">
-                
-                <Link to="/detail" className="btn btn-sm text-dark p-0" id = {ele.id}>
+                <Link to="/detail" state={ele.id} className="btn btn-sm text-dark p-0">
                   <i className="fa fa-eye text-primary mr-1"></i>View Detail
                 </Link>
                 <a href="" className="btn btn-sm text-dark p-0">
