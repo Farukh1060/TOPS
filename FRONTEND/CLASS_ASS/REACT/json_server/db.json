@@ -1,0 +1,29 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "username": "farukh",
+      "email": "farukh@gmail.com",
+      "password": "123",
+      "phone": "95642360"
+    },
+    {
+      "id": "b64a",
+      "username": "farukh",
+      "email": "shikh",
+      "phone": "1452"
+    },
+    {
+      "id": "1c30",
+      "username": "farukh",
+      "email": "farukg@",
+      "phone": "123"
+    },
+    {
+      "username": " far",
+      "email": " fara",
+      "phone": " faralll",
+      "id": "0864"
+    }
+  ]
+}
