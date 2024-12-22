@@ -53,8 +53,8 @@ const Navbar = ()=>{
                             <Link to="/contact" className="nav-item nav-link">Contact</Link>
                         </div>
                         <div className="navbar-nav ml-auto py-0">
-                            <a href="" className="nav-item nav-link">Login</a>
-                            <a href="" className="nav-item nav-link">Register</a>
+                            <Link to="/login" className="nav-item nav-link">Login</Link>
+                            <Link to="/reg" className="nav-item nav-link">Register</Link>
                         </div>
                     </div>
                 </nav>
