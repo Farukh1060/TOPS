@@ -1,29 +1,28 @@
 {
   "user": [
     {
-      "id": "1",
-      "username": "farukh",
-      "email": "farukh@gmail.com",
-      "password": "123",
-      "phone": "95642360"
+      "username": "far",
+      "email": "ABCD",
+      "phone": "25151",
+      "id": "baae"
     },
     {
-      "id": "b64a",
-      "username": "farukh",
-      "email": "shikh",
-      "phone": "1452"
-    },
-    {
-      "id": "1c30",
-      "username": "farukh",
-      "email": "farukg@",
-      "phone": "123"
-    },
-    {
+      "id": "bf15",
       "username": " far",
-      "email": " fara",
-      "phone": " faralll",
-      "id": "0864"
+      "email": " faraukh`",
+      "phone": " faraikj"
+    },
+    {
+      "id": "2244",
+      "username": "farukh",
+      "email": "shaikhfarukh",
+      "phone": "12345679"
+    },
+    {
+      "id": "8328",
+      "username": "",
+      "email": "",
+      "phone": ""
     }
   ]
 }

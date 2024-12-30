@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import User_data from "./Component/User_data";
+import { Outlet } from "react-router-dom";
 
 
 
@@ -75,27 +76,37 @@ const App = () => {
   
 
   const [User_datas,setuser_datas] = useState([])
+  const [running,setrunning]=useState("true")
  
   // console.log(User_datas.length)
 
 
 
 
+  console.log(running)
   useEffect(()=>{
+    console.log(running)
+      
+    if(running == "true"){
+      setrunning("false")
       fetch("http://localhost:3000/user").then(resp=>{
         return resp.json()
       }).then(data=>{
       
         setuser_datas(data);
+        console.log(123)
+       
         
       }).catch(err=>console.log(err)
       )
-  },[])
+    }
+      
+  },[User_datas])
   
   
  
 
-  return (
+  return (<>
     <div className="container "> 
       <div className="row">
         <div className="col-4">
@@ -194,6 +205,9 @@ const App = () => {
         </div>
       </div>
     </div>
+    <Outlet></Outlet>
+
+    </>
   );
 };
 
