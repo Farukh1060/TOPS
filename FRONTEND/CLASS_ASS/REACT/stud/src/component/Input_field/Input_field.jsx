@@ -1,12 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const Input_field = ({ resiveformdata }) => {
+const Input_field = ({ resiveformdata,student}) => {
+
+  // console.log(student)
   let [name, setname] = useState("");
   let [email, setemail] = useState("");
   let [number, setnumber] = useState("");
 
+  useEffect(()=>{
+    console.log("abc")
+
+    if(student.id !=undefined){
+      setname(student.name)
+      setemail(student.email)
+      setnumber(student.number)
+    }
+
+  },[resiveformdata])
+
   const inputnamehandler = (e) => {
-    setname(e.target.value);
+    
+      setname(e.target.value);
+
   };
   const inputemailhandler = (e) => {
     setemail(e.target.value);

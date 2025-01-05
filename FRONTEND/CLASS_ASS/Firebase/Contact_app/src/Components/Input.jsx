@@ -4,7 +4,7 @@ import { CiCirclePlus } from "react-icons/ci";
 
 import React from "react";
 
-const Input = () => {
+const Input = ({open_model}) => {
   return (
     <div className="flex items-center gap-3 px-4">
       <div className="realtive flex items-center flex-grow">
@@ -15,7 +15,7 @@ const Input = () => {
           className={`flex  pl-9 text-white items-center h-[40px] flex-grow rounded-md border-2 border-white bg-transparent ${styles.placeholder}`}
         />
       </div>
-      <CiCirclePlus className="text-5xl text-white"/>
+      <CiCirclePlus className="text-5xl text-white" onClick={open_model}/>
     </div>
   );
 };

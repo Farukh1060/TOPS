@@ -19,7 +19,7 @@ const App = () => {
   const email= useRef()
   const age= useRef()
 
-  const adduser = (e)=>{
+  const adduser = (e)=>{ 
       e.preventDefault()
     const u1 = {
       "username":uname.current.value,"email":email.current.value,"age":age.current.value
