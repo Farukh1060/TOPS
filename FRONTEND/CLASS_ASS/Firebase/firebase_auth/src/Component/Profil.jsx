@@ -4,29 +4,41 @@ import { auth, db } from "../firebase_auth";
 import { doc, getDoc } from "firebase/firestore";
 
 const Profil = () => {
-  const [user, setuser] = useState();
+  const [users, setusers] = useState();
 
   const fetchuserdata = async () => {
-    auth.onAuthStateChanged(async (user) => {
-      // console.log(user.uid);
+    auth.onAuthStateChanged(async (users) => {
+      console.log(users);
       // 
-      if (user == null) {
+      if (users == null) {
         console.log("loding")
+        console.log(users)
         window.location.href = "/";
-      }
-      const snap = await getDoc(doc(db, "user", user.uid));
+      }else if(users.displayName != null){
+        console.log(users.displayName)
+        setusers({
+          name:users.displayName,
+          email:users.email,
+        })
+      }else if(users.displayName == null) {
+        console.log(users.displayName)
+
+        const snap = await getDoc(doc(db, "user", users.uid));
 
  
-      if (snap.exists()) {
-        setuser({
-          name: snap.data().name,
-          email: snap.data().email,
-          number: snap.data().number,
-        });
-      } 
+        if (snap.exists()) {
+          setusers({
+            name: snap.data().name,
+            email: snap.data().email,
+            number: snap.data().number,
+          });
+        } 
+
+      }
+     
     });
   };
-  console.log(user);
+  console.log(auth.currentUser);
 
  
 
@@ -42,11 +54,11 @@ const Profil = () => {
 
   return (
    <>
-      { user ? <div className="text-center">
-      <div>welcome,{user.name}</div>
-      <div>name: {user.name}</div>
-      <div>number: {user.number}</div>
-      <div>email: {user.email}</div>
+      { users ? <div className="text-center">
+      <div>welcome,{users.displayName}</div>
+      <div>name: {users.name}</div>
+      <div>number: {users.number}</div>
+      <div>email: {users.email}</div>
       <div>
         <button className="btn btn-success" onClick={logouthandler}>
           logout

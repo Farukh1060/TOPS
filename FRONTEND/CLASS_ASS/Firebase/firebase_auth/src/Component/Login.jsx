@@ -21,7 +21,10 @@ const Login = () => {
   }
   const google_login = async ()=>{
    const Guser =  await signInWithPopup(auth,provider)
-   console.log(Guser);
+  //  console.log(Guser.user);
+   if(Guser){
+    window.location.href = "/profil"
+   }
    
     
   }
