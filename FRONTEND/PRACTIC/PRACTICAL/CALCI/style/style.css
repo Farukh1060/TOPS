@@ -1,8 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .container {
@@ -11,37 +10,26 @@
   border: 5px groove black;
   margin-inline: auto;
 }
-
 .container .display {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 40px;
   margin: 8px;
   vertical-align: middle;
 }
-
 .container .display input {
   width: 100%;
   font-size: 20px;
   padding-left: 5px;
 }
-
 .container .button {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 2px;
   margin: 5px;
 }
-
 .container .button .spn {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1 /span 2;
+  grid-column: 1/span 2;
 }
-
 .container .button button {
   width: 100%;
   border: 1px solid black;
@@ -51,10 +39,7 @@
   background-color: cornflowerblue;
   color: white;
 }
-
 .container .button button:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+  transform: scale(1.02);
   color: black;
 }
-/*# sourceMappingURL=style.css.map */

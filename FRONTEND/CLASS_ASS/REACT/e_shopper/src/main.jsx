@@ -12,6 +12,8 @@ import Shop from './Component/Shop'
 import Products from './Component/Products'
 import Contact from './Component/Contact'
 import ShopeDetail from './Component/ShopeDetail'
+import Login from './Component/Login'
+import Regestration from './Component/Regestration'
 
 const router = createBrowserRouter([
 
@@ -22,7 +24,9 @@ const router = createBrowserRouter([
     {path:"/contact",element:<Contact/>},
     {path:"/detail",element:<ShopeDetail/>}
     
-  ]}
+  ]},
+  {path:"/login",element:<Login/>},
+  {path:"/reg",element:<Regestration/>}
 
 ]) 
 
