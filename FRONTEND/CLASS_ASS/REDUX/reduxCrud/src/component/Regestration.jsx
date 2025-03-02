@@ -1,30 +1,58 @@
 import { current } from "@reduxjs/toolkit";
-import { useRef } from "react";
-import {useDispatch, useSelector} from "react-redux"
+import { useEffect, useRef } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { submit_data } from "../feature/crud/crudSlice";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Regestration = () => {
+  const navigate = useNavigate();
+  const {id} = useParams()
+  console.log(id);
 
+  useEffect(()=>{
+    if(id){
+      fetch(`http://localhost:3000/users/${id}`).then(resp=>{
+        return resp.json()
+      }).then((data)=>{
+        console.log(data);
+        name.current.value= data.name
+        email.current.value= data.email
+        number.current.value= data.number      
+      })
 
- const dispatch = useDispatch()
+    }
+   
+    
 
-
- const name = useRef()
- const email = useRef()
- const number = useRef()
- 
- 
- 
- const submithandler = (e)=>{
-   e.preventDefault()
-   const user_data = {
-    name:name.current.value,
-    email:email.current.value,
-    number: number.current.value
-   }
-dispatch(submit_data(user_data))
-}
+  },[])
   
+
+  
+
+  const dispatch = useDispatch();
+  const users = useSelector((state)=>{
+    return state.Crud
+  })
+  // console.log(users);
+
+  
+
+  const name = useRef();
+  const email = useRef();
+  const number = useRef();
+
+  const submithandler = (e) => {
+    e.preventDefault();
+    const user_data = {
+      name: name.current.value,
+      email: email.current.value,
+      number: number.current.value,
+    };
+
+    dispatch(submit_data(user_data));
+    navigate("/data");
+  };
+
   return (
     <div className="row">
       <div className="col-6 mx-auto card p-3 m-3">
@@ -47,7 +75,7 @@ dispatch(submit_data(user_data))
               Email address
             </label>
             <input
-            ref={email}
+              ref={email}
               type="email"
               className="form-control"
               id="exampleInputEmail1"
@@ -63,7 +91,7 @@ dispatch(submit_data(user_data))
               Number
             </label>
             <input
-            ref={number}
+              ref={number}
               type="text"
               className="form-control"
               id="exampleInputnumber"

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import User_data from "./Component/User_data";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
+useNavigate
 
 
 

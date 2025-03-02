@@ -63,7 +63,7 @@ const App = () => {
     await  updateDoc(data,{name:studdata.name,email:studdata.email,number:studdata.number})
     }else{
 
-      await addDoc(studentref, studdata);
+      await addDoc(studentref,{name:studdata.name,email:studdata.email,number:studdata.number});
     }
 
 

@@ -7,13 +7,14 @@ import { store } from "./app/store.js";
 import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Nav from "./component/Nav.jsx";
-import Regestration from "./component/regestration.jsx";
+import Regestration from "./component/Regestration.jsx";
 import Display_data from "./component/Display_data.jsx";
 
 const router = createBrowserRouter([
   {path:"/",element:<App></App>,
     children:[
       {path:"/",element:<Regestration></Regestration>},
+      {path:"//:id",element:<Regestration></Regestration>},
       {path:"/data",element:<Display_data></Display_data>}
     ]
   }

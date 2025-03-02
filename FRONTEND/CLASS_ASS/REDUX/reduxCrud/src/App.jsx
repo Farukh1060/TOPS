@@ -1,6 +1,6 @@
 
-import React from 'react'
-import Regestration from './component/regestration'
+import React, { useEffect } from 'react'
+
 import Nav from './component/Nav'
 import { Outlet } from 'react-router-dom'
 
@@ -9,6 +9,7 @@ import { Outlet } from 'react-router-dom'
 
 
 const App = () => {
+ 
   return (<>
   <Nav></Nav>
   <Outlet></Outlet>
