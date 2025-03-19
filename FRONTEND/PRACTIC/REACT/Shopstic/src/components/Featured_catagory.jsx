@@ -20,7 +20,7 @@ const Featured_catagory = () => {
                             <img src={fash} className=" w-[100px] p-4" alt="" />
                             
                         </div>
-                        <p>fashion</p>
+                        <p>home</p>
                         
                     </li>
                     <li className="flex flex-col gap-2 items-center">
@@ -36,7 +36,7 @@ const Featured_catagory = () => {
                             <img src={beauty} className=" w-[100px] p-4" alt="" />
                             
                         </div>
-                        <p>beayty</p>
+                        <p>beauty</p>
                         
                     </li>
                     <li className="flex flex-col gap-2 items-center">
@@ -44,7 +44,7 @@ const Featured_catagory = () => {
                             <img src={ele} className=" w-[100px] p-4" alt="" />
                             
                         </div>
-                        <p>electronic</p>
+                        <p>fragrances</p>
                         
                     </li>
                     <li className="flex flex-col gap-2 items-center">
@@ -52,7 +52,7 @@ const Featured_catagory = () => {
                             <img src={foot} className=" w-[100px] p-4" alt="" />
                             
                         </div>
-                        <p>foot wear</p>
+                        <p> footwear</p>
                         
                     </li>
                     <li className="flex flex-col gap-2 items-center">
@@ -60,7 +60,7 @@ const Featured_catagory = () => {
                             <img src={grosorry} className=" w-[100px] p-4" alt="" />
                             
                         </div>
-                        <p>grocery</p>
+                        <p>groceries</p>
                         
                     </li>
                     <li className="flex flex-col gap-2 items-center">
