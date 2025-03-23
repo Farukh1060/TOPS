@@ -9,6 +9,7 @@ import Featured_catagory from './components/Featured_catagory'
 import Products from './components/Products'
 import Products_detail from './components/Products_detail'
 import { useSelector } from 'react-redux'
+import Payment from './components/payment'
 
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
       
         <Route path='/' element={<Products></Products>}></Route>
         <Route path='/products_detail' element={<Products_detail></Products_detail>}></Route>
+        <Route path='/payment' element={<Payment></Payment>}></Route>
 
       </Route>
 
