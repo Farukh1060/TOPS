@@ -16,15 +16,15 @@ const Featured_catagory = () => {
             <div className="featured">
                 <ul className="flex justify-between">
                     <li className="flex flex-col gap-2 items-center">
-                        <div className="rounded-full overflow-hidden  border-2 border-cyan-900">
+                        <div className="rounded-full overflow-hidden   border-[1px] border-cyan-900">
                             <img src={fash} className=" w-[100px] p-4" alt="" />
                             
                         </div>
-                        <p>fashion</p>
+                        <p>home</p>
                         
                     </li>
                     <li className="flex flex-col gap-2 items-center">
-                        <div className="rounded-full overflow-hidden  border-2 border-cyan-900">
+                        <div className="rounded-full overflow-hidden   border-[1px] border-cyan-900">
                             <img src={bag} className=" w-[100px] p-4" alt="" />
                             
                         </div>
@@ -32,39 +32,39 @@ const Featured_catagory = () => {
                         
                     </li>
                     <li className="flex flex-col gap-2 items-center">
-                        <div className="rounded-full overflow-hidden  border-2 border-cyan-900">
+                        <div className="rounded-full overflow-hidden   border-[1px] border-cyan-900">
                             <img src={beauty} className=" w-[100px] p-4" alt="" />
                             
                         </div>
-                        <p>beayty</p>
+                        <p>beauty</p>
                         
                     </li>
                     <li className="flex flex-col gap-2 items-center">
-                        <div className="rounded-full overflow-hidden  border-2 border-cyan-900">
+                        <div className="rounded-full overflow-hidden   border-[1px] border-cyan-900">
                             <img src={ele} className=" w-[100px] p-4" alt="" />
                             
                         </div>
-                        <p>ele</p>
+                        <p>fragrances</p>
                         
                     </li>
                     <li className="flex flex-col gap-2 items-center">
-                        <div className="rounded-full overflow-hidden  border-2 border-cyan-900">
+                        <div className="rounded-full overflow-hidden   border-[1px] border-cyan-900">
                             <img src={foot} className=" w-[100px] p-4" alt="" />
                             
                         </div>
-                        <p>foot wear</p>
+                        <p> footwear</p>
                         
                     </li>
                     <li className="flex flex-col gap-2 items-center">
-                        <div className="rounded-full overflow-hidden  border-2 border-cyan-900">
+                        <div className="rounded-full overflow-hidden   border-[1px] border-cyan-900">
                             <img src={grosorry} className=" w-[100px] p-4" alt="" />
                             
                         </div>
-                        <p>grocery</p>
+                        <p>groceries</p>
                         
                     </li>
                     <li className="flex flex-col gap-2 items-center">
-                        <div className="rounded-full overflow-hidden  border-2 border-cyan-900">
+                        <div className="rounded-full overflow-hidden   border-[1px] border-cyan-900">
                             <img src={well} className=" w-[100px] p-4" alt="" />
                             
                         </div>
@@ -72,7 +72,7 @@ const Featured_catagory = () => {
                         
                     </li>
                     <li className="flex flex-col gap-2 items-center">
-                        <div className="rounded-full overflow-hidden  border-2 border-cyan-900">
+                        <div className="rounded-full overflow-hidden  border-[1px] border-cyan-900">
                             <img src={jeweelry} className=" w-[100px] p-4" alt="" />
                             
                         </div>

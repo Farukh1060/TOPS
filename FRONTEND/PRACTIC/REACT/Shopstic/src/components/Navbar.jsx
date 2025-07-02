@@ -8,9 +8,17 @@ import { FaRegSquarePlus } from "react-icons/fa6";
 
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setproductbycatag } from "../features/Product/Productslice";
 
 const Navbar = () => {
+
+  const {selectedbycatag} = useSelector(state=>state.products)
+  console.log(selectedbycatag);
+  
+
   const [dropdown, setdropdown] = useState(false);
+  const dispatch = useDispatch()
 
   const dropdownhandler = () => {
     if (dropdown == false) {
@@ -36,7 +44,8 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="midnav_container mt-3 border-b-2 pb-3 ">
+    <div className="sticky top-0 z-10 bg-white">
+    <div className="midnav_container mt-3 border-b-2 py-3 ">
         <div className="midnav flex justify-between  items-center container">
           <div className="logo w-[30%]">
             <img src={download} alt="" />
@@ -59,7 +68,7 @@ const Navbar = () => {
             </div>
             <div className="cart_container  flex  items-center gap-3 text-2xl">
               <div className="compaire relative bg-gray-100 rounded-full p-2">
-                <IoGitCompareOutline></IoGitCompareOutline>{" "}
+                <IoGitCompareOutline></IoGitCompareOutline>
                 <span className="absolute inline-block bg-red-400 rounded-full text-white pl-[6px] w-[20px] -right-[4px] -top-[4px] text-sm">
                   3
                 </span>
@@ -83,7 +92,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="navbar_container container text-[18px] ">
+      <div className="navbar_container container text-[18px] pb-2">
         <div className="navbar mt-3 flex justify-between items-center">
           <div className={`catagory mt-2 flex items-center basis-[250px] justify-between relative cursor-pointer`} >
             <div className="flex items-center  gap-6 justify-between" onClick={() => {dropdownhandler()}} >
@@ -115,20 +124,22 @@ const Navbar = () => {
             </div>
           </div>
           <div className="menu  basis-[650px]">
-            <ul className="flex gap-3 justify-around items-center">
-              <li>home</li>
-              <li>fasion</li>
-              <li>electronic</li>
-              <li>bags</li>
-              <li>footwear</li>
-              <li>growsery</li>
-              <li>beauty</li>
-              <li>more</li>
+            <ul className="flex gap-3 justify-around items-center ">
+              <li className={`cursor-pointer  hover:text-lime-700 ${selectedbycatag==="home" ? "border-b-2 border-red-700" : ""}`} onClick={()=>{dispatch(setproductbycatag("home"))}}>home</li>
+              <li className={`cursor-pointer  hover:text-lime-700 ${selectedbycatag==="beauty" ? "border-b-2 border-red-700" : ""}`}  onClick={()=>{dispatch(setproductbycatag("beauty"))}}>beauty</li>
+              <li className={`cursor-pointer  hover:text-lime-700 ${selectedbycatag==="fragrances" ? "border-b-2 border-red-700" : ""}`} onClick={()=>{dispatch(setproductbycatag("fragrances"))}}>fragrances</li>
+              <li className={`cursor-pointer  hover:text-lime-700 ${selectedbycatag==="groceries" ? "border-b-2 border-red-700" : ""}`}  onClick={()=>{dispatch(setproductbycatag("groceries"))}}>groceries</li>
+              <li className={`cursor-pointer  hover:text-lime-700 ${selectedbycatag==="shoes" ? "border-b-2" : ""}`}>shoes</li>
+              <li className={`cursor-pointer  hover:text-lime-700 ${selectedbycatag==="mobile" ? "border-b-2" : ""}`}>mobile</li>
+              <li className={`cursor-pointer  hover:text-lime-700 ${selectedbycatag==="bags" ? "border-b-2" : ""}`}>bags</li>
+              <li className={`cursor-pointer  hover:text-lime-700 ${selectedbycatag==="more" ? "border-b-2" : ""}`}>more</li>
             </ul>
           </div>
           <div className="delevery">free internatinal delevery</div>
         </div>
       </div>
+    </div>
+    
     </>
   );
 };

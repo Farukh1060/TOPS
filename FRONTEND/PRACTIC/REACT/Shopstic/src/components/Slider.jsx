@@ -47,7 +47,7 @@ const Slider = () =>{
             <div className="container">
                 <div className="slider">
                     <div className="slider_img rounded-3xl overflow-hidden relative border-2">
-                        <img src={img[sliderimg]} alt="" />
+                        <img className="w-full" src={img[sliderimg]} alt="" />
                         <div className="flex justify-between absolute top-1/2 -translate-y-1/2 w-full">
                             <FaAngleDoubleLeft className="text-3xl " onClick={sliderHandlerMinus}></FaAngleDoubleLeft>
                             <FaAngleDoubleRight className="text-3xl " onClick={sliderHandlerPlue}></FaAngleDoubleRight>
